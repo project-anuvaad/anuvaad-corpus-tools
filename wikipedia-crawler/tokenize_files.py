@@ -3,8 +3,8 @@ from pathlib import Path
 import pandas as pd
 from tokenize_utils import tokenize_eng_file, tokenize_hi_file
 
-b_path = os.path.join(r'C:\Users\Dhanvi\Wikipedia_Scraping','Scraped_Files')
-output_path = os.path.join(r'C:\Users\Dhanvi\Wikipedia_Scraping', 'Tokenized_Files')
+b_path = os.path.join(os.getcwd(),'Scraped_Files')
+output_path = os.path.join(os.getcwd(), 'Tokenized_Files')
 Path(output_path).mkdir(parents=True,exist_ok=True)
 
 lang = 'hi'
