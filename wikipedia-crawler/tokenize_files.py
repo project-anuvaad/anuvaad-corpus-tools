@@ -1,4 +1,3 @@
-# TODO: Try writing tokenization logic for the required languages in terms of the categories they belong to. English,Indo-Aryan and Dravidian languages. Tokenize them based on these logic and store the tokenized files in a separte directory
 import os
 from pathlib import Path
 import pandas as pd
@@ -28,14 +27,14 @@ for f in os.listdir(b_path):
         foutsrc = open(os.path.join(output_path,f),'w',encoding='utf-16')
         fouttgt = open(os.path.join(output_path,id+'-'+lang+'.txt'),'w',encoding='utf-16')
         for s in sent_src:
-            if(s.strip() == '' or 'Posted On:' in s or 'by PIB' in s):
+            if(s.strip() == ''):
                 continue
             else:
                 s = s.replace('"','')
                 eng_sentences.append(s)
                 foutsrc.write(s+'\n')
         for s in sent_tgt:
-            if(s.strip() == '' or 'Posted On:' in s or 'by PIB' in s):
+            if(s.strip() == ''):
                 continue
             else:
                 s = s.replace('"','')

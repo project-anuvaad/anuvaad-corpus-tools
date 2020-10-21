@@ -40,8 +40,6 @@ def tokenize_eng_file(mainString):
             continue
         if(re.search('^[a-z]+$',s.strip()) is not None):
             continue
-        if('*' in s):
-            continue
         sentences.append(s.strip().replace('. ','.'))
     return sentences
 
@@ -66,8 +64,6 @@ def tokenize_hi_file(mainHinString):
         if(re.search('^[0-9]+\.$',s.strip()) is not None):
             continue
         if(re.search('^[a-z]+$',s.strip()) is not None):
-            continue
-        if('*' in s):
             continue
         sentences.append(s.strip())
     return sentences

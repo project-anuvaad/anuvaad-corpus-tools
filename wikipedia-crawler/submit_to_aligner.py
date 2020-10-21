@@ -1,13 +1,10 @@
-# TODO: set variables for source and target language, make directories for each respecitve source-target pair. Have just one csv file for one aligning language pair. The additional ones are just appended to the original file. Makes it easy to maintain,edit and keep track of.
-# TODO: make google sheets for wikipedia scraping
-
 import os
 from pathlib import Path
 import pandas as pd
 from aligner_utils import upload_document,download_file,extract_bitext,get_alignment_result,submit_alignment_files
 import time
 
-bearerToken = '439ca0d5f0484d4fbe147aa7a431ba6d|9ddf693d2b9748b796106f000a275e41'
+bearerToken = 'Enter your token here'
 
 lang = 'hi'
 b_path = os.path.join(r'C:\Users\Dhanvi\Wikipedia_Scraping','Tokenized_Files')
