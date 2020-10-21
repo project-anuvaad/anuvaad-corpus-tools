@@ -1,4 +1,3 @@
-# TODO: run only for first 10 links. Keep on updating the csv file for wikipedia links. Get links only from the file.
 import requests
 from bs4 import BeautifulSoup
 from pathlib import Path
@@ -7,7 +6,6 @@ import time
 import math
 import random
 import pandas as pd
-# import pdfkit
 
 acceptable_langs = ['Kannada','Bangla','Marathi','Odia','Urdu','Tamil','Hindi','Assamese','Malayalam','Telugu','Punjabi','Gujarati']
 acceptable_lang_c = ['kn','bn','mr','or','ur','ta','hi','ml','te','pa','gu']
@@ -53,8 +51,6 @@ def scrape_and_write(url,file_name):
     f.write(text)
     f.close()
 
-def get_pdf(uuid,url,lang):
-    pdfkit.from_url(url,os.path.join('PDF',uuid+'-'+lang+'.pdf'))
 
 def get_other_langs(uuid,url,path):
     r = requests.get(url)
@@ -71,11 +67,12 @@ def get_other_langs(uuid,url,path):
 def main():
     something = []
     path = 'Scraped_Files'
-    df_hl = pd.read_csv('Links_to_UUID.csv')
-    handled_links = df_hl['URL'].tolist()
+    handled_links = []
+    if(os.path.exists('Links_to_UUID.csv')):
+        df_hl = pd.read_csv('Links_to_UUID.csv')
+        handled_links = df_hl['URL'].tolist()
     Path(path).mkdir(parents=True,exist_ok=True)
     for i,u in enumerate(next_links):
-        # print(next_links)
         base_url = 'https://en.wikipedia.org'
         url = base_url+u
         get_next_links(url)
@@ -87,12 +84,6 @@ def main():
         something.append([url,uuid])
         scrape_and_write(url,os.path.join(path,uuid+'-en.txt'))
         get_other_langs(uuid,url,path)
-        # break
-        # df = pd.DataFrame(next_links)
-        # if(not os.path.exists('Next_Links.csv')):
-        #     df.to_csv('Next_Links.csv',header=['Links'],index=False,mode='a')
-        # else:
-        #     df.to_csv('Next_Links.csv',header=False,index=False,mode='a')
         df = pd.DataFrame(something)
         if(not os.path.exists('Links_to_UUID.csv')):
             df.to_csv('Links_to_UUID.csv',header=['URL','UUID'],index=False,mode='a')
