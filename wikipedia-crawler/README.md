@@ -23,7 +23,7 @@ An ID is assigned to each article and the files are stored as ID-lang_c.txt wher
 
 To run scraping:
 
-python3 run_scrape_pipeline.py
+	python3 run_scrape_pipeline.py
 	
 ##### 2. Tokenizing
 The process of spliting the scraped document into individual sentences using the Tokenizer. 
