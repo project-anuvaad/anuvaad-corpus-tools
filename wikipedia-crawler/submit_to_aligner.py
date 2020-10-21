@@ -7,12 +7,14 @@ import time
 bearerToken = 'Enter your token here'
 
 lang = 'hi'
-b_path = os.path.join(r'C:\Users\Dhanvi\Wikipedia_Scraping','Tokenized_Files')
-output_path = os.path.join(r'C:\Users\Dhanvi\Wikipedia_Scraping','Aligned_Files')
+b_path = os.path.join(os.getcwd(),'Tokenized_Files')
+output_path = os.path.join(os.getcwd(),'Aligned_Files')
 Path(output_path).mkdir(parents=True,exist_ok=True)
 count = 0
-with open('finished_ids.txt','r') as f:
-    finished_ids = f.read().split(',')
+finished_ids = []
+if(os.path.exists('finished_ids.txt')):
+    with open('finished_ids.txt','r') as f:
+        finished_ids = f.read().split(',')
 count = len(finished_ids)
 for f in os.listdir(b_path):
     if('-en.txt' in f):
@@ -21,7 +23,7 @@ for f in os.listdir(b_path):
         target_am = []
         target_m = []
         id = f.split('-')[0]
-        if(id in finished_ids or id == '118845'):
+        if(id in finished_ids):
             continue
         src_file = os.path.join(b_path,f)
         tgt_file = os.path.join(b_path,id+'-'+lang+'.txt')
