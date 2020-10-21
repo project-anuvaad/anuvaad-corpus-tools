@@ -108,24 +108,6 @@ def get_prid2(date,month,year,url,dri,list_rid,memo):
                 memo[key_name].append(curr_list)
             break
     return list_rid,memo
-    start = time.time()
-    english_rid = ''
-    hindi_rid = ''
-    text_name = None
-    wait = WebDriverWait(dri,200)
-    rid = url.split("=")[1]
-    path = os.getcwd()+"\\"+year+"\\"+month+"\\"+date+"\\"
-    filepath = year+"\\"+month+"\\"+date+"\\"
-    Path(path).mkdir(parents=True,exist_ok=True)
-    # print('Handling language English')
-    # get_text(rid,'English',path)
-    english_rid = rid
-    list_rid.append(english_rid)
-    r = requests.get(url,timeout=100)
-    soup = BeautifulSoup(r.text,"html.parser")
-    release_lang = soup.find("div",attrs={"class":"ReleaseLang"})
-    if(release_lang is None):
-        return list_rid,memo
 
 def select_value(wait,select,value):
     select.select_by_visible_text(value)
@@ -203,7 +185,5 @@ def populate_data(driver,dri,day,month,year,path_parallel_csv):
 if __name__ == "__main__":
     driver = get_driver()
     dri = get_driver()
-    # populate_data(driver,dri,'All','February','2020')
     populate_data(driver,dri,'All','December','2019')
     winsound.Beep(2500,100)
-    # populate_data(driver,dri,'All','February','2020')

@@ -2,7 +2,6 @@ import requests
 import pandas as pd
 import json
 import os
-import winsound
 import re
 
 def tokenize_eng_file(mainString):
@@ -100,15 +99,9 @@ def tokenize_file(month,year,base_path,parallel_file_path,tokenized_file_path,to
                         file_hi_w.write(s+"\n")
                         total_hi_sentences.append([s,i])
 
-    #csv_path = os.getcwd()+"\\CSV_Files\\"+month+"-2020"
     df_en = pd.DataFrame(total_en_sentences)
     df_en.to_csv(total_sentences_path+'Total-English-Sentences.csv',header=header_en,index=False)
 
     df_hi = pd.DataFrame(total_hi_sentences)
     df_hi.to_csv(total_sentences_path+'Total-Hindi-Sentences.csv',header=header_hi,index=False)
 
-    winsound.Beep(1500,10)
-
-
-if __name__ == "__main__":
-    tokenize_file('February')
