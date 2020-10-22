@@ -177,7 +177,7 @@ def get_prid_and_ministry_list(month, year, lang):
     return df_return, list_ministry
 
 
-def scrape_archieve(df_data, month, year, lang, out_dir, list_ministry):
+def scrape_pib_archives(df_data, month, year, lang, out_dir, list_ministry):
     """
     Scrape text using the links provided in dataframe
     Create and write a new dataframe with postin date-time
@@ -307,10 +307,10 @@ if __name__ == "__main__":
         print(f"Number of english ministry: {len(list_ministry_en)}")
         print(f"Number of Hindi Ministry: {len(list_ministry_en)}")
     # Scraping the url links
-    scrape_archieve(
+    scrape_pib_archives(
         df_en, args.month, args.year, "en", args.output_dir, list_ministry_en
     )
-    scrape_archieve(
+    scrape_pib_archives(
         df_hi, args.month, args.year, "hi", args.output_dir, list_ministry_hi
     )
     ministry_data = pd.DataFrame(
