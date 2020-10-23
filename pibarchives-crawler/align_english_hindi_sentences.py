@@ -7,7 +7,7 @@ import sys
 from argparse import ArgumentParser
 from utilities import create_directory, get_file_content, extract_bitext, detect_non_eng
 
-BEARER_TOKEN = 
+BEARER_TOKEN =
 
 
 def preprocess_dataframe(df_data):
