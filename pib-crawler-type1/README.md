@@ -4,7 +4,7 @@
 
 To run : 
 
-	python wrapper.py 'year' 'whetherScrape?' 'whetherTokenize?' 'whetherAlign?'
+	python run_pib_crawler.py 'year' 'whetherScrape?' 'whetherTokenize?' 'whetherAlign?'
 
 Pipeline : 
 
@@ -14,9 +14,9 @@ Pipeline :
 
 First Run : 
 	
-	python wrapper.py 2020 1 1 1
+	python run_pib_crawler.py 2020 1 1 1
 
-wrapper.py takes in 4 command line arguments:
+run_pib_crawler.py takes in 4 command line arguments:
 
 *	1) The first one being the year to scrape, it scrapes all the months in reverse order and writes those files in All directory in the respective month. The file is stored as PRID-Language.txt. It also generates a file containing all the PRID of the websites scraped, which makes it easy to debug and access.
 
@@ -26,11 +26,11 @@ wrapper.py takes in 4 command line arguments:
 	
 *	4) The fourth argument is for whether to align the files that are tokenized in the previous stage. 
 
-Scrape PIB website of all documents on given date , month and year. The required date,month and year is updated in the init function in scrap3_3.py 
+Scrape PIB website of all documents on given date , month and year. The required date,month and year is updated in the init function in pib_scraper.py 
 
 sentence_extraction.py has the code for tokenization of scraped data. Tokenization in this file is carried out using a regular expression and not by calling the API endpoint for it. Only those sentences that have more than 4 words are considred and written in the file, i.e. all those sentences with either 4 or less than 4 words are discarded. It also creates a csv file of all the tokenized sentences from the given file.
 
-aligning.py is used for aligning the two parallel files. This is to be run after tokenization. It also creates a csv file of all the matched and almost matched sentences. 
+sentence_pair_aligner.py is used for aligning the two parallel files. This is to be run after tokenization. It also creates a csv file of all the matched and almost matched sentences. 
 
 The code only scraps Hindi and English parallel documents. The code scraps and generates a parallel lookup csv file in the current directory.
 
@@ -39,7 +39,7 @@ The code only scraps Hindi and English parallel documents. The code scraps and g
 
 To run : 
 
-	python aligning.py
+	python sentence_pair_aligner.py
 
 #### Change the base_path in the code to the root folder of the downloaded tokenized files from Google Drive. The program searches for files in the same folder structure as followed in Drive. The program assumes that all Tokenized files are present in {root_folder}/year/month/Tokenized-Mine-No-Constraints. The program writes the csv file and the aligned files in the folder structure {root_folder}/year/month/Total-Match|Almost-Match.csv and {root_folder}/year/month/Aligned respectively. Any changes in the structure should be updated in the code also.
 
