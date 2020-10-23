@@ -19,13 +19,13 @@ First Run :
 
 wrapper.py takes in 4 command line arguments:
 
-*1) The first one being the year to scrape, it scrapes all the months in reverse order and writes those files in All directory in the respective month. The file is stored as PRID-Language.txt. It also generates a file containing all the PRID of the websites scraped, which makes it easy to debug and access.
+*	1) The first one being the year to scrape, it scrapes all the months in reverse order and writes those files in All directory in the respective month. The file is stored as PRID-Language.txt. It also generates a file containing all the PRID of the websites scraped, which makes it easy to debug and access.
 
-*2) The second argument is for whether to scrape the specified year. This is added in to make it possible to tokenize or align files that are already scraped.
+*	2) The second argument is for whether to scrape the specified year. This is added in to make it possible to tokenize or align files that are already scraped.
 
-*3) The third argument is for whether to tokenize the specified year. If true this tokenizes the files present in the default directory
+*	3) The third argument is for whether to tokenize the specified year. If true this tokenizes the files present in the default directory
 	
-*4) The fourth argument is for whether to align the files that are tokenized in the previous stage. 
+*	4) The fourth argument is for whether to align the files that are tokenized in the previous stage. 
 
 Scrape PIB website of all documents on given date , month and year. The required date,month and year is updated in the init function in scrap3_3.py 
 
