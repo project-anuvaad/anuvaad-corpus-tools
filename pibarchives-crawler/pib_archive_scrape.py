@@ -22,7 +22,7 @@ EXE_PATH = "C:\\Users\\navne\\Downloads\\geckodriver-v0.27.0-win64\\geckodriver.
 def get_prid_and_ministry_list(month, year, lang):
     """
     Change exe_path variable to the driver location
-    Get the release id, ministry-listof all the documents for a given year,month,language
+    Get the release id, ministry-list of all the documents for a given year,month,language
     This will open a firefox browser and populate forms to get only the release Id
     """
 
@@ -187,36 +187,44 @@ def scrape_pib_archives(df_data, month, year, lang, out_dir, list_ministry):
     n_month = n_month.lower()
     main_dir = out_dir
     work_dir = main_dir + "//" + n_month + "_" + n_year
-    align_loc = work_dir + "//" + "align_" + n_month + "_" + n_year
-    parallel_sen_loc = work_dir + "//" + "parallel_sen_" + n_month + "_" + n_year
     create_directory(work_dir)
-    create_directory(align_loc)
-    create_directory(parallel_sen_loc)
     if lang == "en":
         language = "English"
+        language_2 = "Hindi"
         scrape_loc = work_dir + "//" + "scrape_file_en_" + n_month + "_" + n_year
     elif lang == "hi":
         language = "Hindi"
+        language_2 = "English"
         scrape_loc = work_dir + "//" + "scrape_file_hi_" + n_month + "_" + n_year
     else:
         print("Pass valid language code")
         return None
     create_directory(scrape_loc)
     df_data[language + "_Ministry_Name"] = [""] * df_data.shape[0]
+    df_data[language_2 + "_Ministry_Name"] = [""] * df_data.shape[0]
     df_data["Posting_Datetime"] = [pd.to_datetime(np.nan)] * df_data.shape[0]
     df_data["Posting_Date"] = df_data["Posting_Datetime"].apply(lambda x: x.date())
     for p_th in range(df_data.shape[0])[:]:
         b_source = get_html(df_data.loc[p_th, "Link"])
         m_dt = b_source.find("div", attrs={"class": "mddiv content-ministry"})
         m = b_source.find("div", attrs={"class": "contentdiv"})
-        if str(" ".join(m_dt.contents[0].strip().split())) not in list_ministry:
+        df_data.at[p_th, language + "_Ministry_Name"] = str(
+            " ".join(m_dt.contents[0].strip().split())
+        )
+        if (
+            str(" ".join(m_dt.contents[0].strip().split()))
+            not in list_ministry[language + "_Ministry_Name"].values.tolist()
+        ):
             print(
                 "Ministry name missing:",
                 str(" ".join(m_dt.contents[0].strip().split())),
             )
-        df_data.at[p_th, language + "_Ministry_Name"] = str(
-            " ".join(m_dt.contents[0].strip().split())
-        )
+        else:
+            df_data.at[p_th, language_2 + "_Ministry_Name"] = list_ministry[
+                list_ministry[language + "_Ministry_Name"]
+                == df_data.at[p_th, language + "_Ministry_Name"]
+            ][language_2 + "_Ministry_Name"].values[0]
+
         df_data.at[p_th, "Posting_Datetime"] = pd.to_datetime(
             (" ".join(m_dt.contents[1].text.split()[:-1]))
             .replace(".", ":")
@@ -227,10 +235,10 @@ def scrape_pib_archives(df_data, month, year, lang, out_dir, list_ministry):
             scrape_loc
             + "//"
             + str(p_th).zfill(4)
-            + "_en_"
-            + "_".join(
-                df_data.loc[p_th, [language + "_Ministry_Name"]].values[0].split()
-            )
+            + "_"
+            + lang
+            + "_"
+            + "_".join(df_data.loc[p_th, ["English_Ministry_Name"]].values[0].split())
             + "_"
             + df_data.loc[p_th, ["Posting_Date"]].values[0].strftime("%Y-%m-%d")
             + "_"
@@ -303,25 +311,26 @@ if __name__ == "__main__":
     # also creating ministry list
     df_en, list_ministry_en = get_prid_and_ministry_list(args.month, args.year, "en")
     df_hi, list_ministry_hi = get_prid_and_ministry_list(args.month, args.year, "hi")
-    if len(list_ministry_en) != len(list_ministry_en):
-        print(f"Number of english ministry: {len(list_ministry_en)}")
-        print(f"Number of Hindi Ministry: {len(list_ministry_en)}")
-    # Scraping the url links
-    scrape_pib_archives(
-        df_en, args.month, args.year, "en", args.output_dir, list_ministry_en
-    )
-    scrape_pib_archives(
-        df_hi, args.month, args.year, "hi", args.output_dir, list_ministry_hi
-    )
-    ministry_data = pd.DataFrame(
-        list(zip(list_ministry_en, list_ministry_hi)),
-        columns=["English_Ministry_Name", "Hindi_Ministry_Name"],
-    )
-    work_dir = args.output_dir + "//" + args.month + "_" + args.year
-    ministry_data.to_csv(
-        os.path.join(
-            work_dir, "ministry_list_" + args.month + "_" + args.year + ".csv"
-        ),
-        index=False,
-        encoding="utf-16",
-    )
+    if len(list_ministry_en) == len(list_ministry_en):
+        print(len(list_ministry_en), len(list_ministry_en))
+        ministry_data = pd.DataFrame(
+            list(zip(list_ministry_en, list_ministry_hi)),
+            columns=["English_Ministry_Name", "Hindi_Ministry_Name"],
+        )
+        # Scraping the url links
+        scrape_pib_archives(
+            df_en, args.month, args.year, "en", args.output_dir, ministry_data
+        )
+        scrape_pib_archives(
+            df_hi, args.month, args.year, "hi", args.output_dir, ministry_data
+        )
+        work_dir = args.output_dir + "//" + args.month + "_" + args.year
+        ministry_data.to_csv(
+            os.path.join(
+                work_dir, "ministry_list_" + args.month + "_" + args.year + ".csv"
+            ),
+            index=False,
+            encoding="utf-16",
+        )
+    else:
+        print("Number of ministry entry in English and Hindi is not matching")
