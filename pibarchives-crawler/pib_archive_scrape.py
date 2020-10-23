@@ -22,7 +22,7 @@ EXE_PATH = "C:\\Users\\navne\\Downloads\\geckodriver-v0.27.0-win64\\geckodriver.
 def get_prid_and_ministry_list(month, year, lang):
     """
     Change exe_path variable to the driver location
-    Get the release id, ministry-list of all the documents for a given year,month,language
+    Get the release id, ministry-list for a given year,month,language
     This will open a firefox browser and populate forms to get only the release Id
     """
 
@@ -113,7 +113,7 @@ def get_prid_and_ministry_list(month, year, lang):
             time.sleep(0.5)
             if time.time() - start_time > WAIT_TIME:
                 rand_day = random.choice(day_options)
-                while option.text == rand_day.text or rand_day == "All":
+                while option.text == rand_day.text or rand_day.text == "All":
                     rand_day = random.choice(day_options)
                 old_releaseid_el = driver.find_element(By.XPATH, "//ul[@class='link1']")
                 rand_day.click()
