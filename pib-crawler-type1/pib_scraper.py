@@ -14,10 +14,13 @@ import pandas as pd
 import os
 import winsound
 
-
-#Create chrome webdriver object 
-#Input: -
-#Output: webdriver object
+"""
+------------------------------------------------------------
+Create chrome webdriver object 
+Input: -
+Output: webdriver object
+------------------------------------------------------------
+"""
 def get_driver():
     try:
         executable_path = "Path\to\your\chromedriver.exe"
@@ -30,9 +33,13 @@ def get_driver():
         print(e)
         get_driver()
 
-#Scrape PIB webpage using div with id PdfDiv
-#Input: Source code of the webpage to scrape (page_source)
-#Output: List of all the paragraphs or sentences in the given source
+"""
+--------------------------------------------------------
+Scrape PIB webpage using div with id PdfDiv
+Input: Source code of the webpage to scrape (page_source)
+Output: List of all the paragraphs or sentences in the given source
+--------------------------------------------------------
+"""
 def write_text(page_source):
     return_text = []
     soup = BeautifulSoup(page_source,"html.parser")
