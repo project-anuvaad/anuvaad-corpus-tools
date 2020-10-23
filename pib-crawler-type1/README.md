@@ -1,7 +1,6 @@
 # PIB_Scraping
 
-#### Creates all the directories and files in the current directory
-#### Tokenizer in this for now discards sentences that have 4 or less than 4 words. This is not feasible. For now aligning works fine 
+#### Creates all the directories and files in the current directory 
 
 To run : 
 
