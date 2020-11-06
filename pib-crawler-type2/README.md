@@ -21,7 +21,7 @@ Hit the required web page & download the contents in respective languages
 		HTML_FOLDER =
 		Name of html file stored in HTML_FOLDER must be if following format: 
 			Press Information Bureau._<lang_code>_<month>_<year>.html 
-			Example can be ssen in url_location folder provided in repository:
+			Examples can be seen in url_location folder provided in repository:
 				Press Information Bureau._en_october_2019.html
 		Example:
 		MINISTRY_NAME_PARALLEL_LOCATION = "./ministry_parallel_list.csv"
