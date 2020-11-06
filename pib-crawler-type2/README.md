@@ -25,7 +25,7 @@ Hit the required web page & download the contents in respective languages
 				Press Information Bureau._en_october_2019.html
 		Example:
 		MINISTRY_NAME_PARALLEL_LOCATION = "./ministry_parallel_list.csv"
-		HTML_FOLDER = "C://Users//navne//Desktop//Tarento_doc_scraping//PIB//code_base//upload_code//pib_main//url_location"
+		HTML_FOLDER = "C://Users//name//PIB_Scraping//url_location"
 		
 		
 	To run scraping for a particular month of a year:
