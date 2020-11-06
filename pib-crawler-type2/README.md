@@ -1,4 +1,4 @@
-# PIB Crawler
+# PIB Archives Crawler
 
 ## Overview
 This repository houses the crawler code for building the Anuvaad parallel corpus.
@@ -8,7 +8,7 @@ The ultimate goal is to build quality parallel datasets across various domains
 The current set of crawlers are built to scrape, tokenizer and align
 multilingual reports/documents available at various sources.
 
-##### Source : Press Information Bureau ([http://pib.gov.in](http://pib.gov.in))
+##### Source : Press Information Bureau Archives ([http://pibarchive.nic.in](http://pibarchive.nic.in))
 
 
 ## Processing Steps

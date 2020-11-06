@@ -33,7 +33,7 @@ def get_html(open_link):
     b_soup = BeautifulSoup(url, "html.parser", from_encoding="utf-8")
     n_pass = 1
     while b_soup == None and n_pass < 10:
-        with urllib.request.urlopen(filename) as url:
+        with urllib.request.urlopen(open_link) as url:
             b_soup = BeautifulSoup(url, "html.parser", from_encoding="utf-8")
             print("Trying:", n_pass)
             n_pass += 1
