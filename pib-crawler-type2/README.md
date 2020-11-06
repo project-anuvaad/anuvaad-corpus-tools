@@ -34,9 +34,9 @@ Hit the required web page & download the contents in respective languages
  		python3 scrape_main_pib_website_en-hi.py --output-dir ./PIB_main/2019 --month october --year 2019
 
 	To scrape for a complete year execute the script:
-		pib_archive_scrape_yearwise.bat <output-dir> <year>
+		pib_main_scrape_yearwise.bat <output-dir> <year>
 		Example:
-		pib_archive_scrape_yearwise.bat ./PIB_main/2019 2019
+		pib_main_scrape_yearwise.bat ./PIB_main/2019 2019
 
 ##### 2. Tokenizing
 The process of spliting the scraped document into individual sentences using the Tokenizer.
