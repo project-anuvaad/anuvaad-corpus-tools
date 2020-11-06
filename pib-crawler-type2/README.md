@@ -16,15 +16,27 @@ The broader steps involved in all the tools can be generalized to the following 
 ##### 1. Scraping
 Hit the required web page & download the contents in respective languages
 
-	To run scraping for a particular month of a year:
-		puthon3 pib_archieve_scrape.py --output-dir <output-directory> --month <month> --year <year>
+	To Scrape PIB website provide location of parallel-ministry-name csv file (file provided in repository) and location of downloaded html file for both en-hi for a given month and year in scrape_main_pib_website_en-hi.py
+		MINISTRY_NAME_PARALLEL_LOCATION = 
+		HTML_FOLDER =
+		Name of html file stored in HTML_FOLDER must be if following format: 
+			Press Information Bureau._<lang_code>_<month>_<year>.html 
+			Example can be ssen in url_location folder provided in repository:
+				Press Information Bureau._en_october_2019.html
 		Example:
- 		python3 pib_archive_scrape.py --output-dir ./PIB_archieve/2012 --month january --year 2012
+		MINISTRY_NAME_PARALLEL_LOCATION = "./ministry_parallel_list.csv"
+		HTML_FOLDER = "C://Users//navne//Desktop//Tarento_doc_scraping//PIB//code_base//upload_code//pib_main//url_location"
+		
+		
+	To run scraping for a particular month of a year:
+		puthon3 scrape_main_pib_website_en-hi.py --output-dir <output-directory> --month <month> --year <year>
+		Example:
+ 		python3 scrape_main_pib_website_en-hi.py --output-dir ./PIB_main/2019 --month october --year 2019
 
 	To scrape for a complete year execute the script:
 		pib_archive_scrape_yearwise.bat <output-dir> <year>
 		Example:
-		pib_archive_scrape_yearwise.bat ./PIB_archieve/2012 2012
+		pib_archive_scrape_yearwise.bat ./PIB_main/2019 2019
 
 ##### 2. Tokenizing
 The process of spliting the scraped document into individual sentences using the Tokenizer.
@@ -36,12 +48,12 @@ The process of spliting the scraped document into individual sentences using the
 	To tokenize scrape file for a particular month of a given year execute:
 		python3 tokenizer_scrape_file.py  --output-dir <output-directory> --month <month> --year <year>
 		Example:
-		python3 tokenizer_scrape_file.py --output-dir ./PIB_archieve/2011 --month february --year 2011
+		python3 tokenizer_scrape_file.py --output-dir ./PIB_main/2019 --month october --year 2019
   
 	To tokenize scrape data for a complete year execute the script:
 		tokenizer_scrape_file_yearwise.bat <output-dir> <year>
 		Example:
-		tokenizer_scrape_file_yearwise.bat ./PIB_archieve/2012 2012
+		tokenizer_scrape_file_yearwise.bat ./PIB_main/2019 2019
 
 ##### 3. Sentence Aligning
 The process of pairing the sentences across different languages which has the same meaning.
@@ -58,12 +70,12 @@ The process of pairing the sentences across different languages which has the sa
 	To run aligner for a particular month of a given year execute:
 		python3 align_english_hindi_sentences.py  --output-dir <output-directory> --month <month> --year <year>
 		Example:
-		python3 align_english_hindi_sentences.py --output-dir ./PIB_archieve/2010 --month march --year 2010
+		python3 align_english_hindi_sentences.py --output-dir ./PIB_main/2019 --month october --year 2019
 		
 	To align  complete year data execute the script:
 		align_english_hindi_sentences_yearwise.bat <output-dir> <year>
 		Example:
-		align_english_hindi_sentences_yearwise.bat ./PIB_archieve/2010 2010
+		align_english_hindi_sentences_yearwise.bat ./PIB_main/2019 2019
 
 ## Parallel Corpus
 The parallel corpus of the above datasets are available under :
