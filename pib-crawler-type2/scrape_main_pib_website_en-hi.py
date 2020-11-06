@@ -9,7 +9,7 @@ from utilities import (
     get_data,
 )
 
-HTML_FOLDER = "C://Users//navne//Desktop//Tarento_doc_scraping//PIB//code_base//upload_code//pib_main//url_location"
+HTML_FOLDER = "C://Users//url_location"
 MINISTRY_NAME_PARALLEL_LOCATION = "./ministry_parallel_list.csv"
 
 
