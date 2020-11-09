@@ -86,7 +86,7 @@ Exemplary cleaner usage in python:
 
     
 
-    df2= pd.read_csv("./hi_dataset.csv", header=None)
+    df2= pd.read_csv("./hi_dataset.txt", header=None, sep='\t')
     df = pd.DataFrame()
     df = parallelcleanerfn(df2, "hi")
 
