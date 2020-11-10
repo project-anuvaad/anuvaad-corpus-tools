@@ -19,9 +19,9 @@ To view script usage help from terminal, run:
 
 IMPORATNT : Update the BEARER_TOKEN in constants.py before using network related scripts.
 
-#### exec_alignfiles.py
+### exec_alignfiles.py
 
-The script accepts a 2 text files as input and initiates the Aligner service.
+The script accepts 2 TXT files as input and initiates the Aligner service.
 
 To initiate the process:
 
@@ -30,7 +30,7 @@ To initiate the process:
 NOTE : The Target file must necessarily be in English, logs of initiated jobs will be saved in aligner_log.txt for future reference.
 
 
-#### exec_jobid_datasetmaker.py
+### exec_jobid_datasetmaker.py
 
 The script creates cleansed dataset directly by specifying the Workflow Job-ID as input ( Aligner is developed to obtain matching Bi-Lingual sentence pairs, as two text files. Refer other Repos of the same project for details on the same).
 
@@ -49,7 +49,7 @@ Once executed, 3 output files will be generated.
 * Almost Matching cleaned parallel dataset
 * No Match sentences text file
 
-#### exec_parallel_datasetcleaner.py
+### exec_parallel_datasetcleaner.py
 
 The script accepts a 2 column dataset as input and provides the cleaned parallel dataset as output.
 
@@ -66,7 +66,7 @@ To initiate the process:
 
     python3 exec_parallel_datasetcleaner.py -i "./en_hi_dataset.csv" -s "hi" -e "utf-16"  -o "./en_hi_cleaned.csv" 
 
-#### exec_singular_datasetcleaner.py
+### exec_singular_datasetcleaner.py
 
 The script accepts a Text file or 1 column dataset as input and provides the cleaned file as output.
 
@@ -81,7 +81,7 @@ To initiate the process:
 
     python3 exec_singular_datasetcleaner.py -i "./hi_sentences.txt" -l "hi" -e "utf-16"  -o "./hi_cleaned.txt"
 
- #### Cleaning datasets directly from code
+ ### Cleaning datasets directly from code
 
  The files "parallelcleaner.py" and "singularcleaner.py" are standalone functions and could be imported and used directly from python as any other modules are used.
 
