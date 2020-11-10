@@ -141,7 +141,7 @@ def parallelcleanerfn(dfx,secondlanguage):
 
         for item in dumplst:
             file2 = open(dumpname,"a")
-            file2.write(item) 
+            file2.write(str(item)) 
             file2.write("\n")
             file2.close()
             
