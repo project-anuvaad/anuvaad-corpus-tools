@@ -5,7 +5,7 @@
 The code in this repo could be utilized to cleanse dataset prepared for Project Anuvvad by scraping from various sources. 
 It mainly does remove bullets, numbering, unnecessary spacing, unwanted characters and misplaced lingual entries from each parallel/singular dataset.
 
-The 3 files starting with name "exec_" could be executed independently from the terminal by specifying necessary arguments.
+The 4 files starting with name "exec_" could be executed independently from the terminal by specifying necessary arguments.
 
 The remaining 2 files could be imported in python directly, and dataframes could be passed to obtain the cleaned output.
 
@@ -17,20 +17,31 @@ To view script usage help from terminal, run:
 
     python3 exec_[scriptname].py -h
 
+IMPORATNT : Update the BEARER_TOKEN in constants.py before using network related scripts.
+
+#### exec_alignfiles.py
+
+The script accepts a 2 text files as input and initiates the Aligner service.
+
+To initiate the process:
+
+    python3 exec_alignfiles.py -sc "./mal.txt" -l "ml" -tg "./eng.txt"
+
+NOTE : The Target file must necessarily be in English, logs of initiated jobs will be saved in aligner_log.txt for future reference.
+
 
 #### exec_jobid_datasetmaker.py
 
-The script creates cleansed dataset directly by specifying the Alignment Job-ID as input ( Aligner API is made to obtain matching Bi-Lingual sentence pairs, in two text files. Refer other Repos of the same project for details on the same).
+The script creates cleansed dataset directly by specifying the Workflow Job-ID as input ( Aligner is developed to obtain matching Bi-Lingual sentence pairs, as two text files. Refer other Repos of the same project for details on the same).
 
 This script could be executed independently from the command line. It accepts arguments such as:
 
-* -j : Aligner Job ID
-* -s : Second language code, i.e language other than English
+* -j : Workflow Job ID
 * -o : Output directory to save resultant CSV files ( optional)
 
 To initiate the process:
 
-    python3 exec_jobid_datasetmaker.py -j "ALIGN-JOB-ID" -s "hi" -o "/home/downloads/output/"
+    python3 exec_jobid_datasetmaker.py -j "WF-JOB-ID"  -o "/home/downloads/output/"
 
 Once executed, 3 output files will be generated.
 
