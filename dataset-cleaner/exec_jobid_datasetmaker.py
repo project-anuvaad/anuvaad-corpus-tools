@@ -59,15 +59,15 @@ try:
     almostatch_non_english=str(data['jobs'][0]['output']['almostMatch']['source'])
 
 
-    df1=pd.read_csv(download_url+nomatch,encoding='utf-16', sep='\t',header=None )
+    df1=pd.read_csv(download_url+nomatch,encoding='utf-16', sep='\t',header=None, quoting=csv.QUOTE_NONE )
     df=pd.DataFrame()
     df['L1']=df1[0]
     df.to_csv(outputdir+outputfile+"_NO_MATCH_UNCLEANED.txt",index=False,header=False, sep='\t',encoding="utf-16")
     print("No Match Done . . .")
 
 
-    df1=pd.read_csv(download_url+almostmatch_english,encoding='utf-16', sep='\t',header=None)
-    df2=pd.read_csv(download_url+almostatch_non_english,encoding='utf-16', sep='\t',header=None)
+    df1=pd.read_csv(download_url+almostmatch_english,encoding='utf-16', sep='\t',header=None, quoting=csv.QUOTE_NONE)
+    df2=pd.read_csv(download_url+almostatch_non_english,encoding='utf-16', sep='\t',header=None, quoting=csv.QUOTE_NONE)
     df=pd.DataFrame()
     df['L1']=df1[0]
     df['L2']=df2[0]
@@ -81,8 +81,8 @@ try:
 
 
 
-    df1=pd.read_csv(download_url+match_english,encoding='utf-16', sep='\t',header=None)
-    df2=pd.read_csv(download_url+match_non_english,encoding='utf-16', sep='\t',header=None)
+    df1=pd.read_csv(download_url+match_english,encoding='utf-16', sep='\t',header=None, quoting=csv.QUOTE_NONE)
+    df2=pd.read_csv(download_url+match_non_english,encoding='utf-16', sep='\t',header=None, quoting=csv.QUOTE_NONE)
     df=pd.DataFrame()
     df['L1']=df1[0]
     df['L2']=df2[0]
