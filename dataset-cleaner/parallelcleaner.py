@@ -27,6 +27,8 @@ def parallelcleanerfn(dfx,secondlanguage):
         df["L1"] =  df['L1'].str.replace('[^\x00-\x7F]','')
         df["L1"] =  df['L1'].str.replace(';','.')
         df["L2"] =  df['L2'].str.replace(';','.')
+        df["L1"] =  df['L1'].str.replace('  +',' ')
+        df["L2"] =  df['L2'].str.replace('  +',' ')
 
         common_regList=[]
         common_regList.append('▁')
@@ -65,7 +67,6 @@ def parallelcleanerfn(dfx,secondlanguage):
         regList.append('^\...')
         regList.append('^Ø')
         regList.append('^•')
-        regList.append('  +')
         regList.append('= =+')
         regList.append('==+')
 
