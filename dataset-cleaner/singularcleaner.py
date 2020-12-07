@@ -29,7 +29,6 @@ def singularcleanerfn(df,lang):
         common_regList.append('"')
         common_regList.append("'")
         common_regList.append("&#")
-        common_regList.append("\...")
 
         for reg in common_regList:
             df['L1']=df['L1'].str.replace(reg,' ')
@@ -59,12 +58,11 @@ def singularcleanerfn(df,lang):
         regList.append('^\...')
         regList.append('^Ø')
         regList.append('^•')
-        regList.append('  +')
         regList.append('= =+')
         regList.append('==+')
 
         for reg in regList:
-            df['L1']=df['L1'].str.replace(reg,'')
+            df['L1']=df['L1'].str.replace(reg,' ')
 
         df['L1']=df['L1'].str.strip()
         L1list=df['L1'].to_list()
