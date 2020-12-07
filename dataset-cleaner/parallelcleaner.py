@@ -38,7 +38,7 @@ def parallelcleanerfn(dfx,secondlanguage):
 
         for reg in common_regList:
             df['L2']=df['L2'].str.replace(reg,' ')
-            df['L1']=df['L1'].str.replace(reg,'')
+            df['L1']=df['L1'].str.replace(reg,' ')
 
         df['L2']=df['L2'].str.strip()
         df['L1']=df['L1'].str.strip()
@@ -70,8 +70,8 @@ def parallelcleanerfn(dfx,secondlanguage):
         regList.append('==+')
 
         for reg in regList:
-            df['L2']=df['L2'].str.replace(reg,'')
-            df['L1']=df['L1'].str.replace(reg,'')
+            df['L2']=df['L2'].str.replace(reg,' ')
+            df['L1']=df['L1'].str.replace(reg,' ')
 
         df['L2']=df['L2'].str.strip()
         df['L1']=df['L1'].str.strip()
