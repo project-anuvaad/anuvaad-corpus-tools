@@ -35,7 +35,6 @@ def parallelcleanerfn(dfx,secondlanguage):
         common_regList.append('"')
         common_regList.append("'")
         common_regList.append("&#")
-        common_regList.append("\...")
 
         for reg in common_regList:
             df['L2']=df['L2'].str.replace(reg,' ')
