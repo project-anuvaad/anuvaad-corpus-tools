@@ -3,10 +3,13 @@ import json
 from io import StringIO
 
 def upload_document(token, filepath, fileType='file/txt'):
+    print(filepath)
     data = open(filepath, 'rb')
-    url = 'https://auth.anuvaad.org/upload'
+    url = 'https://auth.anuvaad.org/anuvaad-api/file-uploader/v0/upload-file'
+    files = [('file',data)]
+    header = {'auth-token':token}
     try:
-        r = requests.post(url = url, data = data,headers = {'Content-Type': 'text/plain'})
+        r = requests.post(url = url, files = files,headers = header)
         r.raise_for_status()
     except requests.exceptions.HTTPError as e:
         print (e.response.text)
@@ -18,8 +21,8 @@ def upload_document(token, filepath, fileType='file/txt'):
     return obj['data']
 
 def download_file(token,file_id, appendList):
-    url = 'https://auth.anuvaad.org/download/{}'.format(file_id)
-    header = {'Authorization': 'Bearer {}'.format(token)}
+    url = 'https://auth.anuvaad.org/anuvaad-api/file-uploader/v0/serve-file?filename={}'.format(file_id)
+    header = {'auth-token': token}
     try:
         r = requests.get(url, headers=header, timeout=10)
         # print(r)
@@ -38,19 +41,25 @@ def download_file(token,file_id, appendList):
         print(f'RequestException for URL: {url}')
         return
 
-def submit_alignment_files(token, file_id1, lang_code1, file_id2, lang_code2):
-    url = 'https://auth.anuvaad.org/anuvaad-etl/extractor/aligner/v1/sentences/align'
-    body = {
-        "source": {
-            "filepath": file_id1,
-            "locale": lang_code1
-        },
-        "target": {
-            "filepath": file_id2,
-            "locale": lang_code2
-      }
+def submit_alignment_files(token, file_path1, lang_code1, file_path2, lang_code2):
+    url = 'https://auth.anuvaad.org/anuvaad-etl/wf-manager/v1/workflow/async/initiate'
+    body ={
+        "workflowCode":"WF_A_AL",
+        "files":
+        [
+            {
+                "locale": lang_code1,
+                "path": file_path1,
+                "type": "txt"
+            },
+            {
+                "locale": lang_code2,
+                "path": file_path2,
+                "type": "txt"
+            }
+        ]
     }
-    header = {'Authorization': 'Bearer {}'.format(token),'Content-Type': 'application/json'}
+    header = {'auth-token': token,'Content-Type': 'application/json'}
     try:
         r = requests.post(url = url, headers=header, data = json.dumps(body))
         r.raise_for_status()
@@ -61,11 +70,21 @@ def submit_alignment_files(token, file_id1, lang_code1, file_id2, lang_code2):
     return json.loads(r.text)
 
 def get_alignment_result(token, job_id):
-    url = 'https://auth.anuvaad.org/anuvaad-etl/extractor/aligner/v1/alignment/jobs/get/{}'.format(job_id)
-    #print(url)
-    header = {'Authorization': 'Bearer {}'.format(token)}
+    url = 'https://auth.anuvaad.org/anuvaad-etl/wf-manager/v1/workflow/jobs/search/bulk'
+    body={
+        "jobIDs":
+        [
+            job_id
+        ],
+        "taskDetails": "true",
+        "workflowCodes":
+        [
+            "WF_A_AL"
+        ]
+    }
+    header = {'auth-token': token,'Content-Type': 'application/json'}
     try:
-        r = requests.get(url, headers=header)
+        r = requests.post(url, headers=header,data=json.dumps(body))
         r.raise_for_status()
     except requests.exceptions.HTTPError as e:
         print (e.response.text)
@@ -73,7 +92,7 @@ def get_alignment_result(token, job_id):
     rsp = json.loads(r.text)
     # print(rsp)
     if rsp is not None and len(rsp) > 0:
-        if rsp[0]['status'] == 'COMPLETED':
+        if rsp['jobs'][0]['status'] == 'COMPLETED':
             return True, rsp
     return False, rsp
 
