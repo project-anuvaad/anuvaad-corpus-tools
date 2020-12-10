@@ -11,8 +11,8 @@ def trial():
     bearerToken = 'enter your token here'
 
     lang = 'kn'
-    b_path = os.path.join(r'C:\Users\Dhanvi\Wikipedia_Scraping','Tokenized_Files-'+lang)
-    output_path = os.path.join(r'C:\Users\Dhanvi\Wikipedia_Scraping','Aligned_Files-'+lang)
+    b_path = os.path.join(os.getcwd(),'Tokenized_Files-'+lang)
+    output_path = os.path.join(os.getcwd(),'Aligned_Files-'+lang)
     Path(output_path).mkdir(parents=True,exist_ok=True)
     count = 0
     with open('finished_ids-'+lang+'.txt','r') as f:
