@@ -1,4 +1,8 @@
 import re
+from indicnlp.tokenize import sentence_tokenize
+import regex
+#sentences = sentence_tokenize.sentence_split(f1.read(),look_up_dict[lang])
+#look_up_dict = {'English':'en','Hindi':'hi','Kannada':'kn','Tamil':'ta','Marathi':'mr','Telugu':'te','Bengali':'bn','Gujarati':'gu','Malayalam':'ml','Punjabi':'pa','Assamese':'asm','Odia':'or','Urdu':'ur'}
 
 def tokenize_eng_file(mainString):
     sentences = []
@@ -40,11 +44,13 @@ def tokenize_eng_file(mainString):
             continue
         if(re.search('^[a-z]+$',s.strip()) is not None):
             continue
+        if('*' in s):
+            continue
         sentences.append(s.strip().replace('. ','.'))
     return sentences
 
 def tokenize_hi_file(mainHinString):
-    e = '(। +|\? |\n|\*\*|\([MDCLXVImdclxvi]+\)|[0-9]+\.[^0-9])'
+    e = '(? +|\? |\n|\*\*|\([MDCLXVImdclxvi]+\)|[0-9]+\.[^0-9])'
     sentences = []
     splitString = re.split(e,mainHinString)
     for i,s in enumerate(splitString):
@@ -58,12 +64,19 @@ def tokenize_hi_file(mainHinString):
         if(re.search('\([MDCLXVImdclxvi]+\)$',s) is not None):
             # splitString[i+1] = s + splitString[i+1]
             continue
-        if(re.search('। +$',s) is not None):
+        if(re.search('? +$',s) is not None):
             # sentences[-1] += s[0]
             continue
         if(re.search('^[0-9]+\.$',s.strip()) is not None):
             continue
         if(re.search('^[a-z]+$',s.strip()) is not None):
             continue
+        if('*' in s):
+            continue
         sentences.append(s.strip())
+    return sentences
+
+def tokenize_other_lang(mainString,lang):
+    e = '(?<=[^A-Za-z])\.\B '
+    sentences = regex.split(e,mainString)
     return sentences
