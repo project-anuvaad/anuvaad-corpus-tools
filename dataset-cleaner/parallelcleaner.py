@@ -10,6 +10,7 @@ import numpy as np
 import re
 from datetime import datetime
 import os
+from bs4 import BeautifulSoup
 from langdetect import detect ,detect_langs ,DetectorFactory
 DetectorFactory.seed = 0
 
@@ -23,18 +24,26 @@ def parallelcleanerfn(dfx,secondlanguage):
         print("Progressing cleanup script . . .")
 
         df=df.drop_duplicates(subset=['L2','L1'], keep="first")
+        df = df.applymap(lambda text: BeautifulSoup(text).string)
 
         df["L1"] =  df['L1'].str.replace('[^\x00-\x7F]','')
         df["L1"] =  df['L1'].str.replace(';','.')
         df["L2"] =  df['L2'].str.replace(';','.')
-        df["L1"] =  df['L1'].str.replace('  +',' ')
-        df["L2"] =  df['L2'].str.replace('  +',' ')
 
         common_regList=[]
         common_regList.append('▁')
         common_regList.append('"')
         common_regList.append("'")
+        common_regList.append("\*\*")
+        common_regList.append("\* \*")
+        common_regList.append("\t")
         common_regList.append("&#")
+        common_regList.append("\. \.")
+        common_regList.append("xxx")
+        common_regList.append("XXX")
+        common_regList.append("�")
+        common_regList.append('  +')
+
 
         for reg in common_regList:
             df['L2']=df['L2'].str.replace(reg,' ')
@@ -61,6 +70,7 @@ def parallelcleanerfn(dfx,secondlanguage):
         regList.append('^·')
         regList.append('^●')
         regList.append('^&')
+        regList.append('^\*')
         regList.append('^#')
         regList.append('^—')
         regList.append('^\...')
