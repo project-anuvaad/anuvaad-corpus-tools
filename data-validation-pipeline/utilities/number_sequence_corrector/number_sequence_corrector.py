@@ -3,9 +3,9 @@ import pandas as pd
 import numpy as np
 from strsimpy.metric_lcs import MetricLCS
 
-def number_sequence_corr(parallel_data:pd.DataFrame,language:str ='local')->pd.DataFrame:
+def number_sequence_corr(parallel_data:pd.DataFrame,language1:str ='english',language2:str ='local')->pd.DataFrame:
     data = parallel_data.copy()
-    data[f'correted_{language}'] = ['']*parallel_data.shape[0]
+    data[f'correted_{language2}'] = ['']*parallel_data.shape[0]
     for count in range(parallel_data.shape[0]):
         english_sample_text = data.iloc[count,0]
         local_lang_sample_text = data.iloc[count,1]
