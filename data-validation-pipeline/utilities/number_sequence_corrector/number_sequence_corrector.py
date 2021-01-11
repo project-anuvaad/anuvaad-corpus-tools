@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from strsimpy.metric_lcs import MetricLCS
 
-def number_sequence_corr(parallel_data:pd.DataFrame,language:str)->pd.DataFrame:
+def number_sequence_corr(parallel_data:pd.DataFrame,language:str ='local')->pd.DataFrame:
     data = parallel_data.copy()
     data[f'correted_{language}'] = ['']*parallel_data.shape[0]
     for count in range(parallel_data.shape[0]):
