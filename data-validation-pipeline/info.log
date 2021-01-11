@@ -1,0 +1,41 @@
+[2021-01-10 01:20:48,787] {_internal.py:113} MainThread INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-10 01:20:48,788] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-10 01:20:49,873] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-10 01:20:49,874] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 339-380-536
+[2021-01-10 01:20:57,155] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [10/Jan/2021 01:20:57] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-10 01:21:53,986] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/Desktop/DATA_PIPELINE (copy)/resources/data_pipeline_resources.py', reloading
+[2021-01-10 01:21:54,122] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-10 01:21:55,253] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-10 01:21:55,254] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 339-380-536
+[2021-01-10 01:22:49,183] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/Desktop/DATA_PIPELINE (copy)/resources/data_pipeline_resources.py', reloading
+[2021-01-10 01:22:49,304] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-10 01:22:50,175] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-10 01:22:50,176] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 339-380-536
+[2021-01-10 01:22:59,336] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/Desktop/DATA_PIPELINE (copy)/resources/data_pipeline_resources.py', reloading
+[2021-01-10 01:22:59,474] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-10 01:23:00,248] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-10 01:23:00,249] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 339-380-536
+[2021-01-10 01:23:08,388] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/Desktop/DATA_PIPELINE (copy)/resources/data_pipeline_resources.py', reloading
+[2021-01-10 01:23:08,531] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-10 01:23:09,447] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-10 01:23:09,447] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 339-380-536
+[2021-01-10 01:23:20,652] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/Desktop/DATA_PIPELINE (copy)/resources/data_pipeline_resources.py', reloading
+[2021-01-10 01:23:20,772] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-10 01:23:21,614] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-10 01:23:21,615] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 339-380-536
+[2021-01-10 01:27:41,208] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/Desktop/DATA_PIPELINE (copy)/resources/data_pipeline_resources.py', reloading
+[2021-01-10 01:27:41,365] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-10 01:27:42,596] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-10 01:27:42,597] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 339-380-536
+[2021-01-10 01:28:03,896] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [10/Jan/2021 01:28:03] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-10 01:28:16,543] {_internal.py:113} Thread-3 INFO in _internal: 127.0.0.1 - - [10/Jan/2021 01:28:16] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-10 01:28:33,228] {_internal.py:113} Thread-4 INFO in _internal: 127.0.0.1 - - [10/Jan/2021 01:28:33] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-10 01:29:48,810] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/Desktop/DATA_PIPELINE (copy)/resources/data_pipeline_resources.py', reloading
+[2021-01-10 01:29:49,071] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-10 01:29:50,100] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-10 01:29:50,101] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 339-380-536
+[2021-01-10 01:35:23,989] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/Desktop/DATA_PIPELINE (copy)/resources/data_pipeline_resources.py', reloading
+[2021-01-10 01:35:24,131] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-10 01:35:24,950] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-10 01:35:24,951] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 339-380-536
+[2021-01-10 01:40:44,468] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [10/Jan/2021 01:40:44] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
