@@ -9,4 +9,4 @@ bs4==0.0.1
 Flask==1.1.2
 Flask-Cors==3.0.8
 Flask-RESTful==0.3.8
-
+strsimpy==0.2.0
