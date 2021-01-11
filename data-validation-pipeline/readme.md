@@ -32,7 +32,7 @@ It mainly does things like :
 #### 2. Spell Checker
 
 #### 3. Sanity Checker
-##1. Number Sequence Fix
+###1. Number Sequence Fix
 
 
 ## Pipeline Usage
