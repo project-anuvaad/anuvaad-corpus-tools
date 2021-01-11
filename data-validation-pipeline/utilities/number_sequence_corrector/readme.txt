@@ -1,5 +1,6 @@
 # Help for usage
 #3rd Party module 
+  https://github.com/luozhouyang/python-string-similarity
 Usage:
   from number_sequence_corrector import number_sequence_corr
   dataframe_number_sequence_corrected = number_sequence_corr(dataframe_number_sequence_incorrect,lang)
