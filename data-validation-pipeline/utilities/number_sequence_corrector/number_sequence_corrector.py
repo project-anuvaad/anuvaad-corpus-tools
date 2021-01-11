@@ -13,8 +13,8 @@ def number_sequence_corr(parallel_data:pd.DataFrame,language:str)->pd.DataFrame:
     return data.loc[:,[True,False,True]].copy()
     
 def get_corrected_sentence(english_sample_text,local_lang_sample_text):
-    number_english_text = re.findall(r'\d+[-.\\,:()\/\s\d]*\d+|\d{1}',english_sample_text)
-    number_local_lang_text = list(re.finditer(r'\d+[-.\\,:()\/\s\d]*\d+|\d{1}', local_lang_sample_text))
+    number_english_text = re.findall(r'\d+[.\\,:()\/\s\d]*\d+|\d{1}',english_sample_text)
+    number_local_lang_text = list(re.finditer(r'\d+[.\\,:()\/\s\d]*\d+|\d{1}', local_lang_sample_text))
     score_dataframe = pd.DataFrame(columns=range(len(number_local_lang_text)),\
                                    index = range(len(number_english_text)),dtype=np.float)
     for column in score_dataframe.columns:
@@ -44,7 +44,7 @@ def get_corrected_sentence(english_sample_text,local_lang_sample_text):
     edited_local_lang_sample_text = local_lang_sample_text
     look_from = 0
     for src,tgt,_ in replace_dict:
-        iter_obj =re.finditer(r'\d+[-.\\,:()\/\s\d]*\d+|\d{1}',edited_local_lang_sample_text)
+        iter_obj =re.finditer(r'\d+[.\\,:()\/\s\d]*\d+|\d{1}',edited_local_lang_sample_text)
         iter_local_lang__text = list(iter_obj)
         for idx,match_obj in enumerate(iter_local_lang__text):
             if src == match_obj.group(0) and match_obj.span()[0]>=look_from:
