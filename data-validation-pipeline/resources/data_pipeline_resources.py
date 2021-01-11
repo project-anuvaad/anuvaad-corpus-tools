@@ -5,7 +5,7 @@ from flask import request,jsonify
 from anuvaad_auditor.loghandler import log_info, log_exception
 from anuvaad_auditor.errorhandler import post_error
 from datetime import datetime
-from utilities import singularcleanerfn,parallelcleanerfn
+from utilities import singularcleanerfn,parallelcleanerfn,number_sequence_corr
 from flask_restful import fields, marshal_with, reqparse, Resource
 
 
@@ -90,8 +90,8 @@ class DataResources(Resource):
 
                 if(operation=="SANITY_CHECKER"):
 
-                    # df3 = sanitycheckerfn(df, language1)
-                    # return savedf(df3)
+                    df3 = number_sequence_corr(df, language1, language2)
+                    return savedf(df3)
                     pass
 
                 if(operation=="ALL"):
@@ -118,8 +118,8 @@ class DataResources(Resource):
 
                 if(operation=="SANITY_CHECKER"):
 
-                    # df3 = sanitycheckerfn(df, language1, language2)
-                    # return savedf(df3)
+                    df3 = number_sequence_corr(df, language1, language2)
+                    return savedf(df3)
                     pass
 
                 if(operation=="ALL"):
