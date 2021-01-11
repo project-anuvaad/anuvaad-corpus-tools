@@ -33,7 +33,16 @@ It mainly does things like :
 
 #### 3. Sanity Checker
     3.1. Number Sequence Fix
-
+        Third party library:https://github.com/luozhouyang/python-string-similarity
+        Description:
+            Extract number(English Number System) sequence from parallel sentences and match/sort them based on longest common subsequence (LCS) with additional penalty for difference in sequence length.
+            Number-sequence in one of the paralle sentence will be considered as ground truth and number sequence in other sentence will be replaced by number sequence from first one
+        Usage:
+            from number_sequence_corrector import number_sequence_corr
+            dataframe_number_sequence_corrected = number_sequence_corr(dataframe_number_sequence_incorrect,lang)
+            Note:
+               1. In dataframe_number_sequence_incorrect first columns must be sentence which has correct number sequence in english number system and 2nd column must be sentence with incorrect number sequence in english number system.
+               2. Currently 2nd argument in fuction(number_sequence_corr) call is not required and has default value of 'local'.
 
 ## Pipeline Usage
 
