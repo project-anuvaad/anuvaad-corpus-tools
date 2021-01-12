@@ -3,3 +3,4 @@ from .basic_cleaner.singularcleaner import singularcleanerfn
 from .basic_cleaner.parallelcleaner import parallelcleanerfn
 # from .hashing_encryption import hash_password,encrypt_password
 from .number_sequence_corrector.number_sequence_corrector import number_sequence_corr
+from .spell_checker.spell_corrector import spell_corrector

@@ -5,7 +5,7 @@ from flask import request,jsonify
 from anuvaad_auditor.loghandler import log_info, log_exception
 from anuvaad_auditor.errorhandler import post_error
 from datetime import datetime
-from utilities import singularcleanerfn,parallelcleanerfn,number_sequence_corr
+from utilities import singularcleanerfn,parallelcleanerfn,number_sequence_corr,spell_corrector
 from flask_restful import fields, marshal_with, reqparse, Resource
 
 
@@ -84,8 +84,8 @@ class DataResources(Resource):
 
                 if(operation=="SPELL_CHECKER"):
 
-                    # df2 = spellcheckerfn(df, language1)
-                    # return savedf(df2)
+                    df2 = spell_corrector(df, language1)
+                    return savedf(df2)
                     pass
 
                 if(operation=="SANITY_CHECKER"):
@@ -97,7 +97,7 @@ class DataResources(Resource):
                 if(operation=="ALL"):
 
                     df1 = singularcleanerfn(df, language1)
-                    # df2 = spellcheckerfn(df1, language1)
+                    df2 = spell_corrector(df1, language1)
                     # df3 = sanitycheckerfn(df2, language1)
                     return savedf(df1)
 
@@ -112,8 +112,8 @@ class DataResources(Resource):
 
                 if(operation=="SPELL_CHECKER"):
 
-                    # df2 = spellcheckerfn(df, language1, language2)
-                    # return savedf(df2)
+                    df2 = spell_corrector(df, language1, language2)
+                    return savedf(df2)
                     pass
 
                 if(operation=="SANITY_CHECKER"):
@@ -125,7 +125,7 @@ class DataResources(Resource):
                 if(operation=="ALL"):
 
                     df1 = parallelcleanerfn(df, language2)
-                    # df2 = spellcheckerfn(df1, language1, language2)
+                    df2 = spell_corrector(df1, language1, language2)
                     # df3 = sanitycheckerfn(df2, language1, language2)
                     return savedf(df1)
                 
