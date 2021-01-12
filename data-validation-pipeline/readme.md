@@ -107,7 +107,7 @@ At the end, the generated output files could be found under the 'Output' folder
 
 API Endpoint : 
 
-    http://0.0.0.0:5000/data_pipeline
+    http://0.0.0.0:5001/data_pipeline/dataset_validation
 
 INPUT(body) :
 
