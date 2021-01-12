@@ -11,8 +11,8 @@
 In an NLP based project such as Anuvaad the quality of Data which is provided to train the model is of utmost importance.The Data validation pipeline is designed to ensure the quality of dataset which is fed to the NMT model which acts as the core of translation.The pipeline is in a development stage and as of now it has three modules (individual modules available under utils folder)
 
 * Primary dataset cleaner
-* spell checker 
-* sanity checker
+* Spell checker 
+* Sanity checker
 
 Each modules could be used intividually or all together as per the need, by specifying parameters accordingly.
 
@@ -30,6 +30,18 @@ It mainly does things like :
 *  In case of parallel datasets, it drops of the corresponding row in case if a particular field is found wrong.
 
 #### 2. Spell Checker
+
+#### Spell checker currently supports only English in SINGULAR files
+
+Spell Checker/Corrector is still under development and for now implemented using:
+
+    Hunspell : http://hunspell.github.io/
+
+A python binding of the above named cyhunspell is used. The exposed API is:
+
+    Method name         :   spell_corrector
+    Input Parameters    :   Pandas Dataframe consisting of one sentence per row in column L1, lang code of language1, lang code of language2
+    Output              :   Pandas Dataframe consisting of corrected sentence per row in column L1
 
 #### 3. Sanity Checker
     3.1. Number Sequence Fix

@@ -83,7 +83,6 @@ class DataResources(Resource):
                     return savedf(df1)
 
                 if(operation=="SPELL_CHECKER"):
-
                     df2 = spell_corrector(df, language1)
                     return savedf(df2)
                     pass
@@ -125,15 +124,9 @@ class DataResources(Resource):
                 if(operation=="ALL"):
 
                     df1 = parallelcleanerfn(df, language2)
-<<<<<<< HEAD
                     df2 = spell_corrector(df1, language1, language2)
-                    # df3 = sanitycheckerfn(df2, language1, language2)
-                    return savedf(df1)
-=======
-                    # df2 = spellcheckerfn(df1, language1, language2)
                     df3 = number_sequence_corr(df, language1, language2)
                     return savedf(df3)
->>>>>>> da1a1edc08e098fddfe0b5f95397ec07ecd88fb2
                 
               
             return post_error("Parameter Error", "Given parameter mismatch with supported ones", None), 400

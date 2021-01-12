@@ -113,3 +113,78 @@
 [2021-01-12 13:25:16,512] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
 [2021-01-12 13:25:16,531] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
 [2021-01-12 13:25:16,553] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 14:40:12,507] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-12 14:40:14,178] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-12 14:40:14,188] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-12 14:40:14,200] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 14:40:19,641] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [12/Jan/2021 14:40:19] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-12 14:40:32,009] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\resources\\data_pipeline_resources.py', reloading
+[2021-01-12 14:40:32,176] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-12 14:40:34,302] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-12 14:40:34,317] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-12 14:40:34,332] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 14:40:35,177] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [12/Jan/2021 14:40:35] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-12 14:41:40,794] {_internal.py:113} Thread-3 INFO in _internal: 127.0.0.1 - - [12/Jan/2021 14:41:40] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-12 14:42:01,198] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\resources\\data_pipeline_resources.py', reloading
+[2021-01-12 14:42:01,371] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-12 14:42:03,657] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-12 14:42:03,673] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-12 14:42:03,688] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 14:42:09,709] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [12/Jan/2021 14:42:09] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-12 14:42:38,000] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\utilities\\spell_checker\\spell_corrector.py', reloading
+[2021-01-12 14:42:38,188] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-12 14:42:40,411] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-12 14:42:40,423] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-12 14:42:40,440] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 14:42:43,895] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [12/Jan/2021 14:42:43] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-12 14:43:04,205] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\resources\\data_pipeline_resources.py', reloading
+[2021-01-12 14:43:04,362] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-12 14:43:06,356] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-12 14:43:06,371] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-12 14:43:06,387] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 14:43:31,205] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\utilities\\spell_checker\\spell_corrector.py', reloading
+[2021-01-12 14:43:31,423] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-12 14:43:33,611] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-12 14:43:33,623] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-12 14:43:33,639] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 14:43:38,200] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [12/Jan/2021 14:43:38] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-12 14:43:51,273] {_internal.py:113} Thread-3 INFO in _internal: 127.0.0.1 - - [12/Jan/2021 14:43:51] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-12 14:44:22,131] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\utilities\\spell_checker\\spell_corrector.py', reloading
+[2021-01-12 14:44:22,316] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-12 14:44:24,411] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-12 14:44:24,432] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-12 14:44:24,467] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 14:44:29,914] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [12/Jan/2021 14:44:29] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-12 14:44:48,175] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\utilities\\spell_checker\\spell_corrector.py', reloading
+[2021-01-12 14:44:48,328] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-12 14:44:50,366] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-12 14:44:50,382] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-12 14:44:50,395] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 14:44:54,896] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [12/Jan/2021 14:44:54] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-12 14:45:18,902] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\utilities\\spell_checker\\spell_corrector.py', reloading
+[2021-01-12 14:45:19,109] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-12 14:45:21,008] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-12 14:45:21,024] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-12 14:45:21,040] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 14:45:34,195] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\utilities\\spell_checker\\spell_corrector.py', reloading
+[2021-01-12 14:45:34,342] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-12 14:45:36,294] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-12 14:45:36,306] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-12 14:45:36,321] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 14:54:04,940] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-12 14:54:06,514] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-12 14:54:06,525] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-12 14:54:06,538] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 14:54:49,399] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [12/Jan/2021 14:54:49] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-12 14:58:29,854] {_internal.py:113} Thread-3 INFO in _internal: 127.0.0.1 - - [12/Jan/2021 14:58:29] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-12 15:10:09,565] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\utilities\\spell_checker\\spell_corrector.py', reloading
+[2021-01-12 15:10:09,768] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-12 15:10:12,515] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-12 15:10:12,530] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-12 15:10:12,547] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 22:25:26,024] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-12 22:25:27,745] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-12 22:25:27,758] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-12 22:25:27,772] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-12 22:25:38,590] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [12/Jan/2021 22:25:38] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-12 22:26:36,818] {_internal.py:113} Thread-3 INFO in _internal: 127.0.0.1 - - [12/Jan/2021 22:26:36] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
