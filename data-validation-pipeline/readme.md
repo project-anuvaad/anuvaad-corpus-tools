@@ -40,7 +40,7 @@ Spell Checker/Corrector is still under development and for now implemented using
 A python binding of the above named cyhunspell is used. The exposed API is:
 
     Method name         :   spell_corrector
-    Input Parameters    :   Pandas Dataframe consisting of one sentence per row in column L1, lang code of language1, lang code of language2
+    Input Parameters    :   Pandas Dataframe consisting of one sentence per row in column L1, language1, language2
     Output              :   Pandas Dataframe consisting of corrected sentence per row in column L1
 
 #### 3. Sanity Checker
