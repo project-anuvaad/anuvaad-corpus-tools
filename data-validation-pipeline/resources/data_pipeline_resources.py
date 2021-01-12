@@ -126,8 +126,8 @@ class DataResources(Resource):
 
                     df1 = parallelcleanerfn(df, language2)
                     # df2 = spellcheckerfn(df1, language1, language2)
-                    # df3 = sanitycheckerfn(df2, language1, language2)
-                    return savedf(df1)
+                    df3 = number_sequence_corr(df, language1, language2)
+                    return savedf(df3)
                 
               
             return post_error("Parameter Error", "Given parameter mismatch with supported ones", None), 400
