@@ -10,7 +10,7 @@ The journey begins by categorizing words as either correct or incorrect. Sadly, 
 
 ### Working
 <div class="text-red mb-2">
-Spell checker currently supports only English in SINGULAR files
+  .text-red on white
 </div>
 
 The above explained idea is for now implemented using:
