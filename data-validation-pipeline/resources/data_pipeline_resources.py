@@ -89,8 +89,8 @@ class DataResources(Resource):
 
                 if(operation=="SANITY_CHECKER"):
 
-                    df3 = number_sequence_corr(df, language1, language2)
-                    return savedf(df3)
+#                     df3 = number_sequence_corr(df, language1, language2)
+                    return savedf(df)
                     pass
 
                 if(operation=="ALL"):
