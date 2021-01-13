@@ -11,6 +11,7 @@ multilingual reports/documents available at various sources.
 1. Press Information Bureau ([http://pib.gov.in](http://pib.gov.in))
 2. Press Information Bureau Archives ([http://pibarchive.nic.in](http://pibarchive.nic.in))
 3. Wikipedia ([https://www.wikipedia.org](https://www.wikipedia.org))
+4. Prothomalo ([https://www.prothomalo.com](https://www.prothomalo.com))
 
 
 ## Processing Steps
@@ -23,6 +24,9 @@ The process of spliting the scraped document into individual sentences using the
 
 ##### 3. Sentence Aligning
 The process of pairing the sentences across different languages which has the same meaning.
+
+##### 4. Data Validation Pipeline
+This involves both model based validation & generating an ideal sample for manual review.
 
 ## Parallel Corpus
 The parallel corpus of the above datasets are available under :

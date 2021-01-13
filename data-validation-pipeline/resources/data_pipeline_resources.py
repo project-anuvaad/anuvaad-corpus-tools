@@ -13,7 +13,7 @@ class DataResources(Resource):
 
     def post(self):
 
-        # try:
+        try:
             content = request.json
             if("dataset_type" in content):
 
@@ -89,8 +89,8 @@ class DataResources(Resource):
 
                 if(operation=="SANITY_CHECKER"):
 
-                    # df3 = number_sequence_corr(df, language1, language2)
-                    # return savedf(df3)
+#                     df3 = number_sequence_corr(df, language1, language2)
+                    return savedf(df)
                     pass
 
                 if(operation=="ALL"):
@@ -132,8 +132,8 @@ class DataResources(Resource):
               
             return post_error("Parameter Error", "Given parameter mismatch with supported ones", None), 400
 
-        # except Exception as e:
+        except Exception as e:
 
-        #     return post_error("Exception Occoured", str(e), None), 400
+            return post_error("Exception Occoured", str(e), None), 400
 
 
