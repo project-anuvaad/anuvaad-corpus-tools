@@ -96,7 +96,7 @@ class DataResources(Resource):
                 if(operation=="ALL"):
 
                     df1 = singularcleanerfn(df, language1)
-                    df2 = spell_corrector(df1, language1)
+                    df2 = spell_corrector(df1, language1,None)
                     # df3 = sanitycheckerfn(df2, language1)
                     return savedf(df2)
 
@@ -125,7 +125,7 @@ class DataResources(Resource):
                 if(operation=="ALL"):
 
                     df1 = parallelcleanerfn(df, language2)
-                    # df2 = spell_corrector(df1, language1, language2)
+                    df2 = spell_corrector(df1, language1, language2)
                     df3 = number_sequence_corr(df1, language1, language2)
                     return savedf(df3)
                 
