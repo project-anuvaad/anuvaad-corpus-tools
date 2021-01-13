@@ -7,7 +7,6 @@ import re
 #Takes in a pandas dataframe with one sentence per row in column L1
 #Returns a pandas dataframe with corrected sentences, one per row in column L1
 def spell_corrector(df,lang1,lang2):
-    print(df.head())
     #Create an object of the Hunspell class
     h = Hunspell()
     #An empty list to hold the corrected sentences which would later be made into a dataframe
