@@ -13,7 +13,7 @@ class DataResources(Resource):
 
     def post(self):
 
-        try:
+        # try:
             content = request.json
             if("dataset_type" in content):
 
@@ -83,14 +83,14 @@ class DataResources(Resource):
                     return savedf(df1)
 
                 if(operation=="SPELL_CHECKER"):
-                    df2 = spell_corrector(df, language1)
+                    df2 = spell_corrector(df, language1,None)
                     return savedf(df2)
-                    pass
+                    # pass
 
                 if(operation=="SANITY_CHECKER"):
 
-                    df3 = number_sequence_corr(df, language1, language2)
-                    return savedf(df3)
+                    # df3 = number_sequence_corr(df, language1, language2)
+                    # return savedf(df3)
                     pass
 
                 if(operation=="ALL"):
@@ -98,7 +98,7 @@ class DataResources(Resource):
                     df1 = singularcleanerfn(df, language1)
                     df2 = spell_corrector(df1, language1)
                     # df3 = sanitycheckerfn(df2, language1)
-                    return savedf(df1)
+                    return savedf(df2)
 
 
             if(dataset_type == 'PARALLEL'):
@@ -110,8 +110,9 @@ class DataResources(Resource):
                     return savedf(df1)
 
                 if(operation=="SPELL_CHECKER"):
-
+                    print(language2)
                     df2 = spell_corrector(df, language1, language2)
+                    print(df2.head())
                     return savedf(df2)
                     pass
 
@@ -124,15 +125,15 @@ class DataResources(Resource):
                 if(operation=="ALL"):
 
                     df1 = parallelcleanerfn(df, language2)
-                    df2 = spell_corrector(df1, language1, language2)
-                    df3 = number_sequence_corr(df, language1, language2)
+                    # df2 = spell_corrector(df1, language1, language2)
+                    df3 = number_sequence_corr(df1, language1, language2)
                     return savedf(df3)
                 
               
             return post_error("Parameter Error", "Given parameter mismatch with supported ones", None), 400
 
-        except Exception as e:
+        # except Exception as e:
 
-            return post_error("Exception Occoured", str(e), None), 400
+        #     return post_error("Exception Occoured", str(e), None), 400
 
 

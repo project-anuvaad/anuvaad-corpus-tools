@@ -6,11 +6,12 @@ import re
 
 #Takes in a pandas dataframe with one sentence per row in column L1
 #Returns a pandas dataframe with corrected sentences, one per row in column L1
-def spell_corrector(df,lang1,lang2 = 'hi'):
+def spell_corrector(df,lang1,lang2):
+    print(df.head())
     #Create an object of the Hunspell class
     h = Hunspell()
     #An empty list to hold the corrected sentences which would later be made into a dataframe
-    corr_sent_list = []
+    corr_sent_list = {'L1':[],'L2':[]}
     #For each sentence in the dataframe
     for sent in df['L1']:
         #Empty string to which the corrected words are appended
@@ -32,9 +33,13 @@ def spell_corrector(df,lang1,lang2 = 'hi'):
                 else:
                     corr_sent += suggest[0]
         #When all the words in the sentence is traversed, append the corrected_sentence to corr_sent_list
-        corr_sent_list.append(corr_sent)
+        corr_sent_list['L1'].append(corr_sent)
     #Convert the corrected sentences list into pandas dataframe to return
-    return pd.DataFrame(corr_sent_list,columns=['L1'])
+    if lang2 is not None:
+        corr_sent_list['L2'].extend(list(df['L2']))
+        return pd.DataFrame.from_dict(corr_sent_list)
+    else:
+        return pd.DataFrame(corr_sent_list['L1'],columns=['L1'])
 
 
 #Driver code for testing
@@ -44,7 +49,7 @@ if __name__ == "__main__":
     l = [['nonxadpayment amount is not paid.'],['postxadmortem report is not yet available'],['Plaese alliow me to introdduce myhelf, I am a man of waelth und tiaste']]
     #Output : [['nonpayment amount is not paid.']['postmortem report is not yet available'],['Please allow me to introduce myself, I am a man of wealth ind chaste']]
     df = pd.DataFrame(l,columns=['L1'])
-    df = spell_corrector(df,'en')
+    df = spell_corrector(df,'en',None)
     for sent in df['L1']:
         print(sent)
     print(time.time() - start)
