@@ -8,10 +8,17 @@ def number_sequence_corr(parallel_data:pd.DataFrame,language1:str ='english',lan
     data[f'correted_{language2}'] = ['']*parallel_data.shape[0]
     for count in range(parallel_data.shape[0]):
         english_sample_text = data.iloc[count,0]
-        local_lang_sample_text = data.iloc[count,1]
+        if language2 == 'bn':
+            local_lang_sample_text = re.sub(r'[১২৩৪৫৬৭৮৯০]{1}',ben_num_repl,data.iloc[count,1])
+        else:
+            local_lang_sample_text = data.iloc[count,1]
         data.iat[count,2]=get_corrected_sentence(english_sample_text,local_lang_sample_text)
     return data.loc[:,[True,False,True]].copy()
-    
+
+def ben_num_repl(matchobj):
+    lookup_table = {'১':'1','২':'2','৩':'3','৪':'4','৫':'5','৬':'6','৭':'7','৮':'8','৯':'9','০':'0'}
+    return lookup_table[matchobj.group(0)]
+
 def get_corrected_sentence(english_sample_text,local_lang_sample_text):
     number_english_text = re.findall(r'\d+[.\\,:()\/\s\d]*\d+|\d{1}',english_sample_text)
     number_local_lang_text = list(re.finditer(r'\d+[.\\,:()\/\s\d]*\d+|\d{1}', local_lang_sample_text))
