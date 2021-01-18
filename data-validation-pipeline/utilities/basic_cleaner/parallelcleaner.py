@@ -75,7 +75,7 @@ def parallelcleanerfn(df,secondlanguage):
         for i in range(0,len(L1list)):
 
             try:
-                
+
                 title1= L1list[i]
                 title2=L2list[i]
                 dumptitle1= dumpL1list[i]
@@ -115,6 +115,7 @@ def parallelcleanerfn(df,secondlanguage):
         cleaneddf = pd.DataFrame(list(zip(newlanglist1, newlanglist2)), columns =['L1', 'L2']) 
 
 
+        #saves the dropped content to a dump CSV file
         dumpname = "Dumps/dump_"+str(datetime.now().strftime("%Y_%m_%d-%I_%M_%S_%p"))+".csv"
         dumpdf = pd.DataFrame(list(zip(dumplstc1, dumplstc2)), columns =['L1', 'L2']) 
 

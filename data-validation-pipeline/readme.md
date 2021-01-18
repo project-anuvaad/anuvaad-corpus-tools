@@ -157,7 +157,7 @@ INPUT(body) :
     {
         "module_name"      :  "primary_cleaner",
         "dataset_type"     :  "parallel",
-        "input_file"       :  "/home/user2/Desktop/rest_api_demo/abc.txt",
+        "input_file"       :  "/home/user2/Desktop/rest_api_demo/abc.csv",
         "enc_type"         :  "utf-8",
         "src_lang"         :  "en",
         "dest_lang"        :  "bn"
