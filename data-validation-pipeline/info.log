@@ -515,3 +515,66 @@
 [2021-01-18 14:28:50,997] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
 [2021-01-18 14:28:51,011] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
 [2021-01-18 14:29:07,177] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 14:29:07] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-18 14:28:30,131] {_internal.py:113} MainThread INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-18 14:28:30,134] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 14:28:31,685] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 14:28:31,686] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
+[2021-01-18 14:28:36,140] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 14:28:36] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-18 14:33:05,928] {_internal.py:113} Thread-3 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 14:33:05] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-18 14:33:31,460] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/spell_checker/spell_corrector.py', reloading
+[2021-01-18 14:33:31,704] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 14:33:34,488] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 14:33:34,495] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
+[2021-01-18 14:33:36,586] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/spell_checker/spell_corrector.py', reloading
+[2021-01-18 14:33:37,003] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 14:33:38,631] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 14:33:38,631] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
+[2021-01-18 14:33:40,587] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 14:33:40] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-18 14:34:33,836] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/spell_checker/spell_corrector.py', reloading
+[2021-01-18 14:34:34,257] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 14:34:35,959] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 14:34:35,960] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
+[2021-01-18 14:34:38,311] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 14:34:38] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-18 14:36:02,079] {_internal.py:113} MainThread INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-18 14:36:02,080] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 14:36:03,103] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 14:36:03,103] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
+[2021-01-18 14:36:08,813] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 14:36:08] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-18 14:36:31,723] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/spell_checker/spell_corrector.py', reloading
+[2021-01-18 14:36:32,028] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 14:36:34,189] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 14:36:34,193] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
+[2021-01-18 14:36:37,962] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 14:36:37] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-18 14:39:10,600] {_internal.py:113} MainThread INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-18 14:39:10,602] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 14:39:12,084] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 14:39:12,092] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
+[2021-01-18 14:39:16,219] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/spell_checker/spell_corrector.py', reloading
+[2021-01-18 14:39:16,415] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 14:39:17,896] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 14:39:17,897] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
+[2021-01-18 14:39:25,673] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 14:39:25] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-18 23:43:36,114] {_internal.py:113} MainThread INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-18 23:43:36,115] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 23:43:37,102] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 23:43:37,103] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
+[2021-01-18 23:43:53,943] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 23:43:53] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-18 23:45:06,782] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/resources/data_pipeline_resources.py', reloading
+[2021-01-18 23:45:06,968] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 23:45:08,362] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 23:45:08,363] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
+[2021-01-18 23:45:12,103] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 23:45:12] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-18 23:45:51,153] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/resources/data_pipeline_resources.py', reloading
+[2021-01-18 23:45:51,329] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 23:45:52,659] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 23:45:52,663] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
+[2021-01-18 23:45:54,796] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 23:45:54] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-18 23:52:22,708] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/resources/data_pipeline_resources.py', reloading
+[2021-01-18 23:52:23,015] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 23:52:24,207] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 23:52:24,208] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
+[2021-01-19 00:07:43,140] {_internal.py:113} MainThread INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-19 00:07:43,142] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 00:07:43,946] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 00:07:43,948] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
+[2021-01-19 00:07:47,822] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [19/Jan/2021 00:07:47] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -

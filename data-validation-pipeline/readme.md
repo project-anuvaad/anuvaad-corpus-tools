@@ -23,9 +23,9 @@ The primary dataset cleaner module cleans up the whole singular/parallel dataset
 It mainly does things like :
 
 *  Avoid whitespaces
-*  Removes wrong-language sentences from a dataset
+*  Removes wrong-language 'sentences' from a dataset
 *  Removes un-necessarily placed special characters
-*  Removes un-necessary HTML Tags in between sentence
+*  Removes un-necessary HTML Tags in between sentences
 *  Removes bullets, numbering and similar unwanted characters from the beginning of a sentence.
 *  In case of parallel datasets, it drops of the corresponding row in case if a particular field is found wrong.
 
@@ -108,7 +108,7 @@ Input parameters :
                         "SINGULAR" - For txt files or single column csv/tsv files
                         "PARALLEL" - For two-column CSV files out of which first one is English and next is of a regional language
 
-    "operation"       : Specify which module of the pipeline must be executed.
+    "module_name"     : Specify which module of the pipeline must be executed.
 
                         accepted inputs:
 
@@ -118,29 +118,29 @@ Input parameters :
                         
                         "ALL" - > Performs all the three above said operations in order.
 
-    "inputfile"       : Specifies the location of the input dataset
+    "input_file"      : Specifies the location of the input dataset
 
-    "encoding"        : Specifies encoding format of the input dataset
+    "enc_type"        : Specifies encoding format of the input dataset [ supports utf-8 & utf-16 ]
 
-    "language1"       : Specifies language of the first column of the dataset
+    "src_lang"        : Specifies 2 letter language code of the first column of the dataset [ Always expects "en" in case of dual column datasets]
 
-    "language2"[optional] : specifies language of second column of dataset
+    "dest_lang"[optional] : specifies 2 letter language code of second column of dataset
 
 Output:
 
-    "drop"          :   Number of rows dropped wrt input dataset
+    "drop"           :   Number of rows dropped wrt input dataset
 
-    "inputfile"     :   input file path
+    "input_file"     :   input file path
 
-    "inputrows"     :   Number of rows in the input dataset
+    "input_rows"     :   Number of rows in the input dataset
 
-    "operation"     :   Specify module/ALL
+    "module_name"    :   Specify module/ALL
 
-    "outputfile"    :   path of generated outputfile
+    "output_file"    :   path of generated outputfile
 
-    "outputrows"    :   Number of rows in outputfile
+    "output_rows"    :   Number of rows in outputfile
     
-    "timetaken"     :   Total time taken to perform the operation
+    "time_taken"     :   Total time taken to perform the operation
 
 At the end, the generated output files could be found under the 'Output' folder 
 
@@ -153,24 +153,24 @@ API Endpoint :
 INPUT(body) :
 
     {
-        "operation"      :  "PRIMARY_CLEANER",
-        "dataset_type"   :   "SINGULAR",
-        "inputfile"      :  "/home/user2/Desktop/rest_api_demo/abc.txt",
-        "encoding"       :  "utf-8",
-        "language1"      :  "en",
-        "language2"      :  "en"
+        "module_name"      :  "primary_cleaner",
+        "dataset_type"     :  "parallel",
+        "input_file"       :  "/home/user2/Desktop/rest_api_demo/abc.txt",
+        "enc_type"         :  "utf-8",
+        "src_lang"         :  "en",
+        "dest_lang"        :  "bn"
     }
 
 OUTPUT(body) :
 
     {
-        "timetaken"     :   "0:00:00.600161",
-        "drop"          :   1,
-        "inputfile"     :   "/home/user2/Desktop/rest_api_demo/abc.txt",
-        "inputrows"     :   6,
-        "operation"     :   "PRIMARY_CLEANER",
-        "outputfile"    :   "Output/validated_2021_01_10-01_40_44_AM_SINGULAR_PRIMARY_CLEANER.csv",
-        "outputrows"    :   5
+        "time_taken"     :   "0:00:00.600161",
+        "drop"           :   1,
+        "input_file"     :   "/home/user2/Desktop/rest_api_demo/abc.txt",
+        "input_rows"     :   6,
+        "module_name"    :   "PRIMARY_CLEANER",
+        "output_file"    :   "Output/validated_2021_01_10-01_40_44_AM_SINGULAR_PRIMARY_CLEANER.csv",
+        "output_rows"    :   5
     }
 
 
