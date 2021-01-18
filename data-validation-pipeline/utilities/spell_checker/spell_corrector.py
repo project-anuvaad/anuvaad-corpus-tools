@@ -9,6 +9,7 @@ import re
 def spell_corrector(df,lang1,lang2):
     #Create an object of the Hunspell class
     h = Hunspell()
+    print('I am here')
     #An empty list to hold the corrected sentences which would later be made into a dataframe
     corr_sent_list = {'L1':[],'L2':[]}
     #For each sentence in the dataframe

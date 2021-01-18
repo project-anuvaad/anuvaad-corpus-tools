@@ -437,3 +437,63 @@
 [2021-01-13 15:40:26,145] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
 [2021-01-13 15:40:32,126] {utils.py:141} Thread-2 INFO in utils: NumExpr defaulting to 4 threads.
 [2021-01-13 15:40:32,974] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [13/Jan/2021 15:40:32] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-18 11:08:10,384] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 11:08:12,552] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 11:08:12,567] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-18 11:08:12,587] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-18 11:09:00,479] {utils.py:141} Thread-2 INFO in utils: NumExpr defaulting to 4 threads.
+[2021-01-18 11:09:01,784] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 11:09:01] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-18 11:10:40,054] {_internal.py:113} Thread-3 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 11:10:40] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-18 11:15:05,713] {_internal.py:113} Thread-4 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 11:15:05] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-18 11:21:51,085] {_internal.py:113} Thread-5 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 11:21:51] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-18 11:38:30,302] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 11:38:32,216] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 11:38:32,229] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-18 11:38:32,248] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-18 11:38:58,784] {utils.py:141} Thread-2 INFO in utils: NumExpr defaulting to 4 threads.
+[2021-01-18 11:38:59,446] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 11:38:59] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-18 11:39:20,157] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\utilities\\spell_checker\\spell_corrector.py', reloading
+[2021-01-18 11:39:20,606] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 11:39:22,812] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 11:39:22,822] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-18 11:39:22,835] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-18 11:39:24,356] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\utilities\\spell_checker\\spell_corrector.py', reloading
+[2021-01-18 11:39:24,616] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 11:39:26,746] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 11:39:26,760] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-18 11:39:26,776] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-18 11:39:31,724] {utils.py:141} Thread-2 INFO in utils: NumExpr defaulting to 4 threads.
+[2021-01-18 11:39:32,392] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 11:39:32] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-18 11:41:43,003] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\utilities\\spell_checker\\spell_corrector.py', reloading
+[2021-01-18 11:41:43,677] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 11:41:45,986] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 11:41:46,010] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-18 11:41:46,153] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-18 11:41:51,530] {utils.py:141} Thread-2 INFO in utils: NumExpr defaulting to 4 threads.
+[2021-01-18 11:41:52,339] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 11:41:52] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-18 11:42:19,114] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\utilities\\spell_checker\\spell_corrector.py', reloading
+[2021-01-18 11:42:19,732] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 11:42:22,221] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 11:42:22,231] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-18 11:42:22,245] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-18 11:42:33,047] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\resources\\data_pipeline_resources.py', reloading
+[2021-01-18 11:42:33,238] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 11:42:35,677] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 11:42:35,688] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-18 11:42:35,701] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-18 11:42:41,039] {utils.py:141} Thread-2 INFO in utils: NumExpr defaulting to 4 threads.
+[2021-01-18 11:42:41,699] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 11:42:41] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-18 11:42:56,419] {_internal.py:113} MainThread INFO in _internal:  * Detected change in 'C:\\Users\\Dhanvi\\Wikipedia_Crawler\\data-validation-pipeline\\resources\\data_pipeline_resources.py', reloading
+[2021-01-18 11:42:56,960] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 11:42:58,992] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 11:42:59,004] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-18 11:42:59,018] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-18 11:43:04,613] {utils.py:141} Thread-2 INFO in utils: NumExpr defaulting to 4 threads.
+[2021-01-18 11:43:05,259] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 11:43:05] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-18 11:43:33,485] {_internal.py:113} Thread-3 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 11:43:33] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-18 13:03:04,658] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-18 13:03:06,353] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-18 13:03:06,365] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 959-620-893
+[2021-01-18 13:03:06,380] {_internal.py:113} Thread-1 INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-18 13:03:31,929] {utils.py:141} Thread-2 INFO in utils: NumExpr defaulting to 4 threads.
+[2021-01-18 13:03:32,578] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [18/Jan/2021 13:03:32] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -

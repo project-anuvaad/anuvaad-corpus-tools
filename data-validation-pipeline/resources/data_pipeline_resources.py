@@ -125,7 +125,7 @@ class DataResources(Resource):
                     df1 = parallelcleanerfn(df, language2)
                     df1.columns =['L1','L2']
                     df2 = spell_corrector(df1, language1, language2)
-                    df3 = number_sequence_corr(df1, language1, language2)
+                    df3 = number_sequence_corr(df2, language1, language2)
                     return savedf(df3)
                 
               
