@@ -9,31 +9,37 @@ import pandas as pd
 
 acceptable_langs = ['Kannada','Bangla','Marathi','Odia','Urdu','Tamil','Hindi','Assamese','Malayalam','Telugu','Punjabi','Gujarati']
 acceptable_lang_c = ['kn','bn','mr','or','ur','ta','hi','ml','te','pa','gu']
+
+#Starting article for scraping
 next_links = ['/wiki/Supreme_Court']
 
+#Append the new links to the list to process
 def get_next_links(url):
-    r = requests.get(url)
-    soup = BeautifulSoup(r.content,"html.parser")
-    div = soup.find('div',attrs={'id':'content'})
-    aas = div.find_all('a',href=True)
-    for a in aas:
-        if(a is None):
-            continue
-        elif('/wiki/File:' in a['href']):
-            continue
-        elif('/wiki/Wikipedia:' in a['href'] or '/wiki/Category:' in a['href'] or 'Portal:' in a['href'] or 'Template' in a['href'] or 'Special:' in a['href'] or 'https://' in a['href'] or 'wikisource' in a['href']):
-            continue
-        elif('#' in a['href']):
-            continue
-        elif('_(disambiguation)' in a['href']):
-            continue
-        elif('/wiki/'in a['href'] and a['href'] not in next_links ):
-            next_links.append(a['href'])
+    if(len(next_links) < 10000):
+        r = requests.get(url)
+        soup = BeautifulSoup(r.content,"html.parser")
+        div = soup.find('div',attrs={'id':'content'})
+        aas = div.find_all('a',href=True)
+        for a in aas:
+            if(a is None):
+                continue
+            elif('/wiki/File:' in a['href']):
+                continue
+            elif('/wiki/Wikipedia:' in a['href'] or '/wiki/Category:' in a['href'] or 'Portal:' in a['href'] or 'Template' in a['href'] or 'Special:' in a['href'] or 'https://' in a['href'] or 'wikisource' in a['href']):
+                continue
+            elif('#' in a['href']):
+                continue
+            elif('_(disambiguation)' in a['href']):
+                continue
+            elif('/wiki/'in a['href'] and a['href'] not in next_links ):
+                next_links.append(a['href'])
 
+#Generate a random id for each article                
 def get_id():
     uuid = str(hex(math.floor((2+random.random()) * 0x80000000)))[2:8]
     return uuid
 
+#Scrape and write all the p tags from the article
 def scrape_and_write(url,file_name):
     text = ''
     r = requests.get(url)
@@ -51,7 +57,7 @@ def scrape_and_write(url,file_name):
     f.write(text)
     f.close()
 
-
+#Scrape the article in all other languages and save them as the id - lang
 def get_other_langs(uuid,url,path):
     r = requests.get(url)
     soup = BeautifulSoup(r.content,'html.parser')
@@ -63,7 +69,7 @@ def get_other_langs(uuid,url,path):
         if(lang in acceptable_lang_c):
             scrape_and_write(a['href'],os.path.join(path,uuid+'-'+lang+'.txt'))
 
-
+#Start scraping with given starting article
 def main():
     something = []
     path = 'Scraped_Files'
