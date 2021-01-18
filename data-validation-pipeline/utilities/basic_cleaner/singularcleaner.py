@@ -1,5 +1,4 @@
 #######################################################################################################
-# AUTHOR  : aswin.pradeep@tarento.com
 # AIM     : Standalone python function to clean single column dataframe
 # USAGE   : df = singularcleanerfn(df, "hi")
 #######################################################################################################
@@ -11,11 +10,14 @@ import re
 from datetime import datetime
 import os
 from langdetect import detect ,detect_langs ,DetectorFactory
+from utilities.basic_cleaner import regxlist
 DetectorFactory.seed = 0
 
+#functions accepts dataframe and a language as input
+#First column is supposed to be in english
 def singularcleanerfn(df,lang):
     
-        print("Progressing single column cleanup script . . .")
+        print("Progressing single column cleanup script , numer of rows : ", len(df))
 
         df=df.drop_duplicates()
         if(lang=='en'):
@@ -24,42 +26,13 @@ def singularcleanerfn(df,lang):
         df["L1"] =  df['L1'].str.replace(';','.')
         df["L1"] =  df['L1'].str.replace(':',' ')
 
-        common_regList=[]
-        common_regList.append('▁')
-        common_regList.append('"')
-        common_regList.append("'")
-        common_regList.append("&#")
+        common_regList = regxlist.common_regList
+        regList = regxlist.regList
 
         for reg in common_regList:
             df['L1']=df['L1'].str.replace(reg,' ')
 
         df['L1']=df['L1'].str.strip()
-
-        regList=[]
-        regList.append('^[0-9]+\.')
-        regList.append('^[0-9]\.')
-        regList.append('^[0-9][0-9]\.')
-        regList.append('^[(][0-9]+[)]')
-        regList.append('^[0-9]+[)]')
-        regList.append('^[(][a-zA-Z][)]')
-        regList.append('^[a-zA-z]\.')
-        regList.append('^[a-zA-z][)]')
-        regList.append('^[IVXLCDM]+\.')
-        regList.append('^[(][IVXLCDM]+[)]')
-        regList.append('^[ivxlcdm]+\.')
-        regList.append('^[(][ivxlcdm]+[)]')
-        regList.append('^[ivxlcdm]+[)]')
-        regList.append('^-')
-        regList.append('^·')
-        regList.append('^●')
-        regList.append('^&')
-        regList.append('^#')
-        regList.append('^—')
-        regList.append('^\...')
-        regList.append('^Ø')
-        regList.append('^•')
-        regList.append('= =+')
-        regList.append('==+')
 
         for reg in regList:
             df['L1']=df['L1'].str.replace(reg,' ')

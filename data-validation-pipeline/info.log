@@ -578,3 +578,83 @@
 [2021-01-19 00:07:43,946] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
 [2021-01-19 00:07:43,948] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 317-946-547
 [2021-01-19 00:07:47,822] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [19/Jan/2021 00:07:47] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-19 01:45:47,142] {_internal.py:113} MainThread INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-19 01:45:47,147] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 01:45:48,175] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 01:45:48,217] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 01:46:09,076] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [19/Jan/2021 01:46:09] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-19 01:46:24,970] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/parallelcleaner.py', reloading
+[2021-01-19 01:46:25,299] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 01:46:26,926] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 01:46:26,927] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 01:46:29,322] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [19/Jan/2021 01:46:29] "[31m[1mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 400 -
+[2021-01-19 01:47:09,704] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/parallelcleaner.py', reloading
+[2021-01-19 01:47:09,876] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 01:47:11,903] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 01:47:11,907] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 01:47:14,128] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [19/Jan/2021 01:47:14] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-19 01:48:32,507] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/parallelcleaner.py', reloading
+[2021-01-19 01:48:32,781] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 01:48:34,035] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 01:48:34,036] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 01:48:35,990] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [19/Jan/2021 01:48:35] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-19 01:51:26,176] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/parallelcleaner.py', reloading
+[2021-01-19 01:51:26,506] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 01:51:27,699] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 01:51:27,700] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 01:51:35,664] {_internal.py:113} MainThread INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-19 01:51:35,665] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 01:51:36,521] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 01:51:36,522] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 01:51:40,024] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [19/Jan/2021 01:51:40] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-19 01:52:30,677] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/parallelcleaner.py', reloading
+[2021-01-19 01:52:31,044] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 01:52:32,480] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 01:52:32,482] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 01:52:34,313] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [19/Jan/2021 01:52:34] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-19 01:53:08,169] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/parallelcleaner.py', reloading
+[2021-01-19 01:53:08,533] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 01:53:10,297] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 01:53:10,298] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 01:53:12,385] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [19/Jan/2021 01:53:12] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -
+[2021-01-19 01:56:01,483] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/singularcleaner.py', reloading
+[2021-01-19 01:56:01,715] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 01:56:02,656] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 01:56:02,656] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 01:56:12,829] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/singularcleaner.py', reloading
+[2021-01-19 01:56:13,003] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 01:56:14,279] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 01:56:14,283] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 01:57:37,739] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/singularcleaner.py', reloading
+[2021-01-19 01:57:37,901] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 01:57:38,788] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 01:57:38,789] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 01:58:38,822] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/parallelcleaner.py', reloading
+[2021-01-19 01:58:38,965] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 01:58:40,094] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 01:58:40,095] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 02:00:01,506] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/parallelcleaner.py', reloading
+[2021-01-19 02:00:01,635] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 02:00:02,597] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 02:00:02,598] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 02:00:46,444] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/regxlist.py', reloading
+[2021-01-19 02:00:46,568] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 02:00:47,367] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 02:00:47,368] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 02:00:58,593] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/regxlist.py', reloading
+[2021-01-19 02:00:58,717] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 02:00:59,552] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 02:00:59,552] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 02:05:59,837] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/parallelcleaner.py', reloading
+[2021-01-19 02:06:00,016] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 02:06:01,391] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 02:06:01,392] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 02:07:55,413] {_internal.py:113} MainThread INFO in _internal:  * Detected change in '/home/user2/JAN_18_PIPELINE/anuvaad-corpus-tools/data-validation-pipeline/utilities/basic_cleaner/singularcleaner.py', reloading
+[2021-01-19 02:07:55,539] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 02:07:56,430] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 02:07:56,431] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 02:08:59,103] {_internal.py:113} MainThread INFO in _internal:  * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+[2021-01-19 02:08:59,104] {_internal.py:113} MainThread INFO in _internal:  * Restarting with stat
+[2021-01-19 02:08:59,906] {_internal.py:113} MainThread WARNING in _internal:  * Debugger is active!
+[2021-01-19 02:08:59,907] {_internal.py:113} MainThread INFO in _internal:  * Debugger PIN: 118-679-378
+[2021-01-19 02:09:03,430] {_internal.py:113} Thread-2 INFO in _internal: 127.0.0.1 - - [19/Jan/2021 02:09:03] "[37mPOST /data_pipeline/dataset_validation HTTP/1.1[0m" 200 -

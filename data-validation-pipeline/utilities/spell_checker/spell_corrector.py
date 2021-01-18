@@ -9,13 +9,12 @@ import re
 def spell_corrector(df,lang1,lang2):
     #Create an object of the Hunspell class
     h = Hunspell()
-    print('I am here')
-    print(df)
+    print('I am spell_checker')
     #An empty list to hold the corrected sentences which would later be made into a dataframe
     corr_sent_list = {'L1':[],'L2':[]}
     #For each sentence in the dataframe
     for sent in df['L1']:
-        print(sent)
+        
         #Empty string to which the corrected words are appended
         corr_sent = ''
         #For every word in the sentence. Which is split by word boundary

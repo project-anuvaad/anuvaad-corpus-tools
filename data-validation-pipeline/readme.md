@@ -47,6 +47,8 @@ Usage:
     df = pd.DataFrame()
     df = parallelcleanerfn(df2, "hi")
 
+
+
 #### 2. Spell Checker
 
 #### Spell checker currently supports only English in SINGULAR files
@@ -105,18 +107,18 @@ Input parameters :
 
                         accepted formats:
 
-                        "SINGULAR" - For txt files or single column csv/tsv files
-                        "PARALLEL" - For two-column CSV files out of which first one is English and next is of a regional language
+                        "singular" - For txt files or single column csv/tsv files
+                        "parallel" - For two-column CSV files out of which first one is English and next is of a regional language
 
     "module_name"     : Specify which module of the pipeline must be executed.
 
                         accepted inputs:
 
-                        "PRIMARY-CLEANER"
-                        "SPELL_CHECKER"
-                        "SANITY_CHECKER"
+                        "primary_cleaner"
+                        "spell_checker"
+                        "sanity_checker"
                         
-                        "ALL" - > Performs all the three above said operations in order.
+                        "all" - > Performs all the three above said operations in order.
 
     "input_file"      : Specifies the location of the input dataset
 
