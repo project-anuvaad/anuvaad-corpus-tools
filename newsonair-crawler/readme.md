@@ -27,7 +27,7 @@ By observing various articles in [Newsonair](http://newsonair.com/) website, we 
 To initiate the process:
 
     python3 ./newsonair_scraper.py
-    python3 ./run_textscraper.py
+    python3 ./newsonair_csvpostprocessing.py
 
 
 ## Outcome
@@ -38,6 +38,6 @@ Sample output can be seen inside the *sample_outputs* Folder
 
 ## Status
 
-    WIP [ Tested successfully on jan (1-10) 2021]
+    WIP [ Tested successfully in the daterange 01-01-2021 to 10-01-2021]
     Values are hard-coded
     All exceptions are not handled
