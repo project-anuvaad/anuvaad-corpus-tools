@@ -12,6 +12,7 @@ multilingual reports/documents available at various sources.
 2. Press Information Bureau Archives ([http://pibarchive.nic.in](http://pibarchive.nic.in))
 3. Wikipedia ([https://www.wikipedia.org](https://www.wikipedia.org))
 4. Prothomalo ([https://www.prothomalo.com](https://www.prothomalo.com))
+5. Newsonair ([http://newsonair.com](http://newsonair.com))
 
 
 ## Processing Steps
