@@ -1,5 +1,6 @@
-CHROME_DRIVER_PATH ='chromedriver'
+CHROME_DRIVER_PATH = "chromedriver"
 DRIVER_WAIT_TIME = 20
-# ENGLISH_MONTH_DATE_GAP = [(1,5),(4,9),(8,13),(12,17),(16,21),(20,25),(24,28),(27,month_end)]
-# BENGALI_MONTH_DATE_GAP = 
-CSV_FILE_ENCODING = 'utf-16'
+CSV_FILE_ENCODING = "utf-16"
+ANUVAAD_USERNAME = "navneet.kumar@tarento.com"
+ANUVAAD_PASSWORD = "********"
+BREAK_PROGRESS = False
