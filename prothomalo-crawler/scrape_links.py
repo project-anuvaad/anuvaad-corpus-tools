@@ -6,15 +6,15 @@ import os
 import pandas as pd
 from bs4 import BeautifulSoup
 
-'''Scrapes articles from each link, 
+''' Scrapes articles from each link, 
     breaks the entire content into sentences and appends as a line,
     removes special characters to support allowed file names,
     creates a directory and file to write each article as a new txt file
     argv[0] --> filename,
     argv[1] --> csv file path with links to scrape from,
-    argv[2] --> directory name.'''
+    argv[2] --> directory name. '''
 
-september = pd.read_csv(str(sys.argv[1]))
+articles_data = pd.read_csv(str(sys.argv[1]))
 
 filenames = september['Headline']
 
@@ -22,7 +22,7 @@ bad_chars = [';', ':', '!', '?', '|', '/', '"', '+', '<', '>', '.', "*"]
 
 start_time = time.time()
 
-for count, link in enumerate(september['Link']):
+for count, link in enumerate(articles_data['Link']):
     markup_string = requests.get(link, stream=True).content
     soup = BeautifulSoup(markup_string, "html.parser")
     content = soup.findAll(['p', 'h1', 'h2', 'figcaption'])
