@@ -213,9 +213,13 @@ def write_english_link_month(year, month, driver, out_dir):
                     print(len(headings), end="-")
                 elif len(headings) == no_entries:
                     repeat = False
+                    print('Done')
                     break
                 else:
+                    print('Done')
                     break
+            if repeat == True:
+                print("Repeating the loop for current date range")
         entries = driver.find_elements_by_xpath(
             "//div[@class='customStoryCard9-m__wrapper__yEFJV']"
         )
