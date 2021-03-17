@@ -13,7 +13,7 @@ multilingual reports/documents available at various sources.
 3. Wikipedia ([https://www.wikipedia.org](https://www.wikipedia.org))
 4. Prothomalo ([https://www.prothomalo.com](https://www.prothomalo.com))
 5. Newsonair ([http://newsonair.com](http://newsonair.com))
-6. Indianexpress ([https://indianexpress.com/](https://indianexpress.com/))
+6. Indianexpress ([https://indianexpress.com](https://indianexpress.com))
 
 
 ## Processing Steps
