@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup
 out_folder = str(sys.argv[0])
 month = str(sys.argv[1])
 language = str(sys.argv[2])
-section = str(sys.argv[4])
+section = str(sys.argv[3])
 
 september = pd.read_csv(f" '{out_folder}/{month}_{language}_articles_ie_{section}_2020.csv', encoding='utf-16' ")
 
