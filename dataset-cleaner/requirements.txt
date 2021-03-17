@@ -4,3 +4,7 @@ numpy==1.18.5
 urllib3==1.25.10
 requests==2.24.0
 bs4==0.0.1
+polyglot==16.7.4
+PyICU==2.6
+pycld2==0.41
+Morfessor==2.0.6
