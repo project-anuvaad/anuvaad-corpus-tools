@@ -10,12 +10,15 @@ import numpy as np
 import re
 from datetime import datetime
 import os
-from langdetect import detect ,detect_langs ,DetectorFactory
-DetectorFactory.seed = 0
+from polyglot.detect import Detector 
+import regxlist
+# from langdetect import detect ,detect_langs ,DetectorFactory
+# DetectorFactory.seed = 0
+
 
 def singularcleanerfn(df,lang):
     
-        print("Progressing single column cleanup script . . .")
+        print("Progressing single column cleanup script , numer of rows : ", len(df))
 
         df=df.drop_duplicates()
         if(lang=='en'):
@@ -24,42 +27,13 @@ def singularcleanerfn(df,lang):
         df["L1"] =  df['L1'].str.replace(';','.')
         df["L1"] =  df['L1'].str.replace(':',' ')
 
-        common_regList=[]
-        common_regList.append('▁')
-        common_regList.append('"')
-        common_regList.append("'")
-        common_regList.append("&#")
+        common_regList = regxlist.common_regList
+        regList = regxlist.regList
 
         for reg in common_regList:
             df['L1']=df['L1'].str.replace(reg,' ')
 
         df['L1']=df['L1'].str.strip()
-
-        regList=[]
-        regList.append('^[0-9]+\.')
-        regList.append('^[0-9]\.')
-        regList.append('^[0-9][0-9]\.')
-        regList.append('^[(][0-9]+[)]')
-        regList.append('^[0-9]+[)]')
-        regList.append('^[(][a-zA-Z][)]')
-        regList.append('^[a-zA-z]\.')
-        regList.append('^[a-zA-z][)]')
-        regList.append('^[IVXLCDM]+\.')
-        regList.append('^[(][IVXLCDM]+[)]')
-        regList.append('^[ivxlcdm]+\.')
-        regList.append('^[(][ivxlcdm]+[)]')
-        regList.append('^[ivxlcdm]+[)]')
-        regList.append('^-')
-        regList.append('^·')
-        regList.append('^●')
-        regList.append('^&')
-        regList.append('^#')
-        regList.append('^—')
-        regList.append('^\...')
-        regList.append('^Ø')
-        regList.append('^•')
-        regList.append('= =+')
-        regList.append('==+')
 
         for reg in regList:
             df['L1']=df['L1'].str.replace(reg,' ')
@@ -70,12 +44,13 @@ def singularcleanerfn(df,lang):
         newlanglist1 = []
         for title in L1list:
             try:
-                if(len(title)<10):
+                if(len(title)<5):
                 # if(len(title)<10 or len(re.findall(r'\w+', title))<4):
                     newlanglist1.append("NA")
                     dumplst.append(title)
                 else:
-                    detlan=detect(title)
+                    # detlan=detect(title) #using langdetect library
+                    detlan = Detector(title).language.code #using polygot langdetect
                     if(detlan!=lang):
                         newlanglist1.append("NA")
                         dumplst.append(title)
@@ -112,7 +87,7 @@ def singularcleanerfn(df,lang):
             file2.write("\n")
             file2.close()
 
+        df = df.replace('\n','', regex=True)
         print(len(df), " rows processed successfully")    
         return(df)
-
 

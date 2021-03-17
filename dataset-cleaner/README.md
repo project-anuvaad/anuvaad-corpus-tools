@@ -97,8 +97,18 @@ Exemplary cleaner usage in python:
 
     
 
-    df2= pd.read_csv("./hi_dataset.txt", header=None, sep='\t')
+    df2= pd.read_csv("./hi_dataset.txt", header=None, sep='\n')
     df = pd.DataFrame()
-    df = parallelcleanerfn(df2, "hi")
+    df = singularcleanerfn(df2, "hi")
 
+    # to call the same function parallely as chunks in case of large datasets
 
+    chunksize = 10000
+    cleaneddf = pd.DataFrame()
+    for i in range(int(df.shape[0]/chunksize)+1):
+
+        tempdf = parallelcleanerfn(df.loc[i*chunksize:(i+1)*chunksize-1,:],"hi")
+        cleaneddf = cleaneddf.append(tempdf)
+        print(f'{i} iteration done')
+
+NOTE : Regular expressions could be added/removed in the file regxlist.py
