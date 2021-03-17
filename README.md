@@ -14,6 +14,7 @@ multilingual reports/documents available at various sources.
 4. Prothomalo ([https://www.prothomalo.com](https://www.prothomalo.com))
 5. Newsonair ([http://newsonair.com](http://newsonair.com))
 6. Indianexpress ([https://indianexpress.com](https://indianexpress.com))
+7. DW ([https://dw.com](https://dw.com))
 
 
 ## Processing Steps
