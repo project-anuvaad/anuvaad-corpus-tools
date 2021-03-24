@@ -15,6 +15,7 @@ multilingual reports/documents available at various sources.
 5. Newsonair ([http://newsonair.com](http://newsonair.com))
 6. Indianexpress ([https://indianexpress.com](https://indianexpress.com))
 7. DW ([https://dw.com](https://dw.com))
+8. Goodreturns ([https://www.goodreturns.in/]https://www.goodreturns.in/)
 
 
 ## Processing Steps
