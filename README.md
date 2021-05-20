@@ -17,6 +17,7 @@ multilingual reports/documents available at various sources.
 7. DW ([https://dw.com](https://dw.com))
 8. Goodreturns ([https://www.goodreturns.in/](https://www.goodreturns.in/))
 9. Jagran-Josh ([https://www.jagran.com/](https://www.jagran.com/))
+10. Tribune ([https://tribuneindia.com](https://tribuneindia.com))
 
 ## Processing Steps
 The broader steps involved in all the tools can be generalized to the following :
