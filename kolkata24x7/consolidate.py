@@ -48,18 +48,18 @@ match.drop_duplicates(subset=['English Sentences'], inplace=True)
 almost_match.drop_duplicates(subset=['English Sentences'], inplace=True)
 print(len(match),len(almost_match))
 match.to_csv(
-    os.path.join(out_dir, f"Total_IndianExpress_{lang_code}-En_{year}_Aligner_Match.csv"),
+    os.path.join(out_dir, f"Total_lokmat_{lang_code}-En_{year}_Aligner_Match.csv"),
     encoding=config.CSV_FILE_ENCODING,
     index=False,
 )
 match.to_csv(
-    os.path.join(out_dir, f"Total_IndianExpress_{lang_code}-En_{year}_Aligner_Match.tsv"),
+    os.path.join(out_dir, f"Total_lokmat_{lang_code}-En_{year}_Aligner_Match.tsv"),
     encoding=config.CSV_FILE_ENCODING,
     index=False,
     sep = '\t'
 )
 almost_match.to_csv(
-    os.path.join(out_dir, f"Total_IndianExpress_{lang_code}-En_{year}_Aligner_Almost_Match.csv"),
+    os.path.join(out_dir, f"Total_lokmat_{lang_code}-En_{year}_Aligner_Almost_Match.csv"),
     encoding=config.CSV_FILE_ENCODING,
     index=False,
 )
