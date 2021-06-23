@@ -3,7 +3,7 @@ import numpy
 import sys
 from argparse import ArgumentParser
 
-def func1(inp_file_loc,interval_freq,max_sent,encode,tot_max):
+def dataset_sampler(inp_file_loc,interval_freq,max_sent,encode,tot_max):
 	try:
 		df=pandas.read_csv(inp_file_loc,encoding=encode)
 	except:
@@ -45,7 +45,7 @@ def main():
 	encode=args.encoding
 	interval_freq=args.interval
 	max_sent=args.max_sentences
-	func1(inp_file_loc,interval_freq,max_sent,encode,cutoff)
+	dataset_sampler(inp_file_loc,interval_freq,max_sent,encode,cutoff)
 	
 if __name__ == "__main__":
 	main()
