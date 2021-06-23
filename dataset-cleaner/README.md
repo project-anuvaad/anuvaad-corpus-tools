@@ -81,6 +81,24 @@ To initiate the process:
 
     python3 exec_singular_datasetcleaner.py -i "./hi_sentences.txt" -l "hi" -e "utf-16"  -o "./hi_cleaned.txt"
 
+### exec_dataset_sampler.py
+
+The script accepts a 3 column dataset as input and provides the sampled file with desired variations as output.
+
+NOTE : Output file is created as [input_file]-sampled.csv in the same folder as input file.
+
+This script could be executed independently from the command line. It accepts arguments such as:
+
+* -f : input dataset filename
+* -i : interval frequency
+* -e : encoding
+* -s : max sentences per interval
+* -c : max cutoff
+
+To initiate the process:
+
+    python3 exec_dataset_sampler.py -f "./hi_sentences.csv" -e "utf-16" -i 0.01 -s 5 -c 4
+
  ### Cleaning datasets directly from code
 
  The files "parallelcleaner.py" and "singularcleaner.py" are standalone functions and could be imported and used directly from python as any other modules are used.
