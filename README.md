@@ -18,6 +18,8 @@ multilingual reports/documents available at various sources.
 8. Goodreturns ([https://www.goodreturns.in/](https://www.goodreturns.in/))
 9. Jagran-Josh ([https://www.jagran.com/](https://www.jagran.com/))
 10. Tribune ([https://tribuneindia.com](https://tribuneindia.com))
+11. Times of India ([https://timesofindia.indiatimes.com/](https://timesofindia.indiatimes.com/))
+12. Zee News ([https://zeenews.india.com/](https://zeenews.india.com/))
 
 ## Processing Steps
 The broader steps involved in all the tools can be generalized to the following :
