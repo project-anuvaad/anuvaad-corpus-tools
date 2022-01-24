@@ -21,6 +21,7 @@ multilingual reports/documents available at various sources.
 11. Times of India ([https://timesofindia.indiatimes.com/](https://timesofindia.indiatimes.com/))
 12. Zee News ([https://zeenews.india.com/](https://zeenews.india.com/))
 13. Pranabmukherjii ([http://pranabmukherjee.nic.in/](http://pranabmukherjee.nic.in/))
+14. Eparliament([http://eparlib.nic.in/](http://eparlib.nic.in/))
 
 ## Processing Steps
 The broader steps involved in all the tools can be generalized to the following :
