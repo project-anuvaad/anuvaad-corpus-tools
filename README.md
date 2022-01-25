@@ -22,6 +22,7 @@ multilingual reports/documents available at various sources.
 12. Zee News ([https://zeenews.india.com/](https://zeenews.india.com/))
 13. Pranabmukherjii ([http://pranabmukherjee.nic.in/](http://pranabmukherjee.nic.in/))
 14. Eparliament([http://eparlib.nic.in/](http://eparlib.nic.in/))
+15. Ebalbook([https://cart.ebalbharati.in/BalBooks/ebook.aspx](https://cart.ebalbharati.in/BalBooks/ebook.aspx))
 
 ## Processing Steps
 The broader steps involved in all the tools can be generalized to the following :
