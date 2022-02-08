@@ -15,22 +15,22 @@
 1.importing libraries:
        specify the required libraries.
 
-2.Install Selenium Driver
+2.Install Selenium Driver:
        can install each time to run the browser or can assign the path of the driver after installation.
 
-3.Select the available languages
+3.Select the available languages:
        Get the list of languages used.
 
-4.Select the available standards
+4.Select the available standards:
        Get the list of the standards used.
        
-5.Select the available subjects
+5.Select the available subjects:
        Get the list of subjects used.
 
-6.download the file url
+6.download the file url:
        by defining the file location, path and the url inside a function.
 
-7.automate the page to page view and download the file
+7.automate the page to page view and download the file:
        this website parse through medium->grades->subjects.
        Getting the file through a nested like process, where we can access the subjects only if we have the drop down of the grade selected.
        drop.select - used to get the list from dropdown.
