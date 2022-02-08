@@ -80,8 +80,8 @@ for i in tqdm(range(3, len(medium))):
 #             print(len(subject[sub]))
             print(subject[sub].text)
             subjects.append(subject[sub].text)
-            myru = driver_sam.find_element_by_xpath('/html/body/app-root/app-textbook/div[2]/div[1]/div/form/div/div[3]/div/select')
-            drop = Select(myru)
+            sub_path = driver_sam.find_element_by_xpath('/html/body/app-root/app-textbook/div[2]/div[1]/div/form/div/div[3]/div/select')
+            drop = Select(sub_path)
             drop.select_by_index(sub)
             
             os.mkdir(os.path.join(g_path, subjects[sub]))
